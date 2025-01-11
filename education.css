@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Ampher';
+    src: url('Ampher.ttf')
+}
+
+@font-face {
+    font-family: 'Switzal';
+    src: url('Switzal.ttf');
+}
+
+@font-face {
+    font-family: 'Robert Rocket';
+    src: url('Robot\ Rocket.otf')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+body {
+    background-color: white;
+}
+
+header {
+    background-color: rgb(59, 204, 204);
+    font-family: 'Ampher';
+    font-weight: 200;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    margin: 1px;
+    font-size: 13px;
+}
+
+.head {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 23px;
+    padding: 3px;
+    margin: 3px;
+    margin-top: 30px;
+}
+
+.explore {
+    font-family: 'Roboto';
+    font-weight: 300;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 3px;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.explore p {
+    text-align: center;
+}
+.faculties {
+    padding: 3px;
+    margin: 3px;
+}
+.faculties p {
+    font-family: 'Roboto';
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(62, 233, 210, 0.404);
+    box-shadow: 0 0 15px rgb(78, 75, 75);
+    margin: 3px;
+    padding: 20px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60%;
+    margin: 2px;
+    padding: 2px;
+}
