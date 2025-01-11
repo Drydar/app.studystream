@@ -18,18 +18,257 @@
 
     <div class="faculties">
         <h2 class="head">Select a Faculty</h2>
-        <p>School of Agriculture and Agricultural Technology<br>(SAAT)</p>
-        <p>School of Basic Medical Sciences<br>(S.B.M.S)</p>
-        <p>School of Engineering and Engineering Technology<br>(S.E.E.T)</p>
-        <p>School of Electrical Systems and Engineering Technology<br>(S.E.S.E.T)</p>
-        <p>School of Information and Communication Technology<br>(S.I.C.T)</p>
-        <p>School of Logistics and Information Technology<br>(S.L.I.T)</p>
-        <p>School of Biological Sciences<br>S.O.B.S</p>
-        <p>School of Environmental Sciences<br>(S.O.E.S)</p>
-        <p>School of Health Technology<br>(S.O.H.T)</p>
-        <p>School of Physical Sciences<br>(S.O.P.S)</p>
+        <p id="faculty_SAAT"><b>School of Agriculture and Agricultural Technology<br>(SAAT)</b></p>
+        <div id="SAAT" class="content">
+            <h4 class="department">Select a department</h4>
+            <p>Agricultural Economics</p>
+            <p>Agricultural Extension</p>
+            <p>Animal Science adn Technology</p>
+            <p>Crop Science and Technology</p>
+            <p>Fisheries and Aquaculture Technology</p>
+            <p>Forestry and Wildlife</p>
+            <p>Soil Science and Technology</p>
+        </div>
+        <p id="faculty_SBMS"><b>School of Basic Medical Sciences<br>(S.B.M.S)</b></p>
+            <div id="SBMS" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Human Anatomy</p>
+                <p>Human Physiology</p>
+            </div>
+        <p id="faculty_SEET"><b>School of Engineering and Engineering Technology<br>(S.E.E.T)</b></p>
+            <div id="SEET" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Agricultural and Bioresources Engineering</p>
+                <p>Biomedical Engineering</p>
+                <p>Chemical Engineering</p>
+                <p>Civil Engineering</p>
+                <p>Food Science and Technology</p>
+                <p>Materials and Metalugical Engineering</p>
+                <p>Mechanical Engineering</p>
+                <p>Petroleum Engineering</p>
+                <p>Polymer and Textile Engineering</p>
+            </div>
+        <p id="faculty_SESET"><b>School of Electrical Systems and Engineering Technology<br>(S.E.S.E.T)</b></p>
+            <div id="SESET" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Computer Engineering</p>
+                <p>Electrical (Power Systems) Engineering</p>
+                <p>Mechatroncis Engineering</p>
+                <p>Telecommunication Engineering</p>
+                <p>Electrical and Electroncis Engineering</p>
+            </div>
+        <p id="faculty_SICT"><b>School of Information and Communication Technology<br>(S.I.C.T)</b></p>
+            <div id="SICT" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Computer Science</p>
+                <p>Cyber Security</p>
+                <p>Information Technology</p>
+                <p>Software Engineering</p>
+            </div>
+        <p id="faculty_SLIT"><b>School of Logistics and Information Technology<br>(S.L.I.T)</b></p>
+            <div id="SLIT" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Entrepreneurship and Innovation</p>
+                <p>Logistics and Transport Technology</p>
+                <p>Supply Chain Management</p>
+                <p>Project Management Technology</p>
+            </div>
+        <p id="faculty_SOBS"><b>School of Biological Sciences<br>S.O.B.S</b></p>
+            <div id="SOBS" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Biochemistry</p>
+                <p>Biology</p>
+                <p>Biotechnology</p>
+                <p>Microbiology</p>
+                <p>Forensic Science</p>
+            </div>
+        <p id="faculty_SOES"><b>School of Environmental Sciences<br>(S.O.E.S)</b></p>
+            <div id="SOES" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Architecture</p>
+                <p>Building Technology</p>
+                <p>Environmental Management</p>
+                <p>Quality Surveying</p>
+                <p>Urban and Regional Planning</p>
+                <p>Environmental Management and Evaluation</p>
+                <p>Surveying and Geoinformatics</p>
+            </div>
+        <p id="faculty_SOHT"><b>School of Health Technology<br>(S.O.H.T)</b></p>
+            <div id="SOHT" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Dental Technology</p>
+                <p>Environmental Health Science</p>
+                <p>Optometry</p>
+                <p>Prosthetics and Orthotics</p>
+                <p>Radiography</p>
+            </div>
+        <p id="faculty_SOPS"><b>School of Physical Sciences<br>(S.O.P.S)</b></p>
+            <div id="SOPS" class="content">
+                <h4 class="department">Select a department</h4>
+                <p>Chemistry</p>
+                <p>Geology</p>
+                <p>Mathematics</p>
+                <p>Physics</p>
+                <p>Science Laboratory Technology</p>
+                <p>Statistics</p>
+            </div>
     </div>
 </body>
+
+<script>
+        const faculty_SAAT=document.getElementById('faculty_SAAT');
+        const faculty_SBMS=document.getElementById('faculty_SBMS');
+        const faculty_SEET=document.getElementById('faculty_SEET');
+        const faculty_SESET=document.getElementById('faculty_SESET');
+        const faculty_SICT=document.getElementById('faculty_SICT');
+        const faculty_SLIT=document.getElementById('faculty_SLIT');
+        const faculty_SOBS=document.getElementById('faculty_SOBS');
+        const faculty_SOES=document.getElementById('faculty_SOES');
+        const faculty_SOHT=document.getElementById('faculty_SOHT');
+        const faculty_SOPS=document.getElementById('faculty_SOPS');
+        
+        const SAAT=document.getElementById('SAAT');
+        const SBMS=document.getElementById('SBMS');
+        const SEET=document.getElementById('SEET');
+        const SESET=document.getElementById('SESET');
+        const SICT=document.getElementById('SICT');
+        const SLIT=document.getElementById('SLIT');
+        const SOBS=document.getElementById('SOBS');
+        const SOES=document.getElementById('SOES');
+        const SOHT=document.getElementById('SOHT');
+        const SOPS=document.getElementById('SOPS');
+
+        faculty_SAAT.addEventListener('click', () => {
+            SAAT.classList.add('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SBMS.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.add('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SEET.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.add('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SESET.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.add('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SICT.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.add('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SLIT.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.add('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SOBS.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.add('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SOES.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.add('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SOHT.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.add('active');
+            SOPS.classList.remove('active');
+        });
+
+        faculty_SOPS.addEventListener('click', () => {
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.add('active');
+        });
+
+</script>
 
 <footer>
     <p>Since 2024|StreamPlex. All rights reserved.</p>

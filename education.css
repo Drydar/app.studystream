@@ -4,25 +4,16 @@
 }
 
 @font-face {
-    font-family: 'Switzal';
-    src: url('Switzal.ttf');
-}
-
-@font-face {
-    font-family: 'Robert Rocket';
-    src: url('Robot\ Rocket.otf')
-}
-
-@font-face {
     font-family: 'Roboto';
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 body {
-    background-color: white;
+    background-color: rgb(241, 233, 233);
 }
 
 header {
-    background-color: rgb(59, 204, 204);
+    background-color: rgb(8, 253, 253);
+    box-shadow: 0 0 15px rgb(78, 75, 75);
     font-family: 'Ampher';
     font-weight: 200;
     border-radius: 20px;
@@ -41,6 +32,18 @@ header {
     margin-top: 30px;
 }
 
+.department {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 17px;
+    padding: 3px;
+    margin: 3px;
+    margin-top: 30px;
+    border: none;
+    background-color: none;
+    text-align: center;
+}
+
 .explore {
     font-family: 'Roboto';
     font-weight: 300;
@@ -57,19 +60,36 @@ header {
 }
 .faculties {
     padding: 3px;
-    margin: 3px;
+    margin: 0px;
 }
 .faculties p {
     font-family: 'Roboto';
     border-radius: 10px;
     border: none;
-    background-color: rgba(62, 233, 210, 0.404);
+    background-color: rgb(59, 204, 204);
     box-shadow: 0 0 15px rgb(78, 75, 75);
-    margin: 3px;
+    margin: 0px;
     padding: 20px;
     color: black;
     margin-top: 20px;
     text-align: center;
+}
+
+.content {
+    display: none;
+    padding: 1px;
+    margin: 1px;
+}
+
+.content p {
+    background-color: transparent;
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.content.active {
+    display: block;
 }
 
 footer {
