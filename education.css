@@ -8,12 +8,13 @@
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 body {
-    background-color: rgb(241, 233, 233);
+    background-image: url(books.jpg);
+    background-size: cover;
 }
 
 header {
     background-color: rgb(8, 253, 253);
-    box-shadow: 0 0 15px rgb(78, 75, 75);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
     font-family: 'Ampher';
     font-weight: 200;
     border-radius: 20px;
@@ -30,6 +31,7 @@ header {
     padding: 3px;
     margin: 3px;
     margin-top: 30px;
+    color: white;
 }
 
 .department {
@@ -66,25 +68,33 @@ header {
     font-family: 'Roboto';
     border-radius: 10px;
     border: none;
-    background-color: rgb(59, 204, 204);
+    background-color: rgba(121, 245, 245, 0.699);
     box-shadow: 0 0 15px rgb(78, 75, 75);
     margin: 0px;
     padding: 20px;
     color: black;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
+}
+
+.faculties p:hover {
+    background-color: rgb(66, 66, 66);
+    color:aliceblue;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 .content {
     display: none;
-    padding: 1px;
-    margin: 1px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .content p {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.692);
     text-align: left;
     font-size: 14px;
+    box-shadow: 0 0 20px rgb(248, 248, 248);
+    color: white;
 }
 
 

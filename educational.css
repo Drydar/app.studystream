@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+    background-image: url(cbt-wallpaper.jpg);
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+.course {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    border-radius: 0 0 20px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.678);
+    background-size: cover;
+    box-shadow: 0 0 15px rgba(206, 226, 22, 0.842);
+    margin: 0px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-family: 'Roboto';
+}
+
+.content {
+    padding: 1px;
+    margin: 1px;
+    line-height: 1;
+}
+
+.topic {
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 400;
+    background-color: rgba(207, 203, 203, 0.562);
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin: 3px;
+    margin-top: 20px;
+}
+
+.topic:hover {
+    background-color: rgba(0, 0, 0, 0.527);
+    color: rgba(255, 255, 255, 0.788);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.788);
+}
+
+.subs{ 
+    display: none;
+} 
+
+.subs.active {
+    display: block;
+}
+
+.subs p {
+    font-family: 'Roboto';
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    margin-left: 30px;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    margin-top: 10px;
+    box-shadow: 0 0 25px rgb(24, 7, 7);
+}
+
+.subs p:hover {
+    background-color: rgba(255, 255, 255, 0.37);
+    color: rgba(0, 0, 0, 0.699);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.category {
+    margin-bottom: 10px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50%;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
