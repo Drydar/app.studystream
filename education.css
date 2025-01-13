@@ -38,11 +38,10 @@ header {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 17px;
-    padding: 3px;
-    margin: 3px;
+    padding: 10px;
+    margin: 0px;
     margin-top: 30px;
     border: none;
-    background-color: none;
     text-align: center;
 }
 
@@ -68,25 +67,28 @@ header {
     font-family: 'Roboto';
     border-radius: 10px;
     border: none;
-    background-color: rgba(121, 245, 245, 0.699);
-    box-shadow: 0 0 15px rgb(78, 75, 75);
+    background-color: rgb(66, 66, 66);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     margin: 0px;
     padding: 20px;
-    color: black;
+    color:aliceblue;
     margin-top: 10px;
     text-align: center;
 }
 
 .faculties p:hover {
-    background-color: rgb(66, 66, 66);
-    color:aliceblue;
-    box-shadow: 0 0 20px rgb(255, 255, 255);
+    background-color: rgba(121, 245, 245, 0.699);
+    color: black;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
 .content {
     display: none;
-    padding: 0px;
+    padding: 5px;
     margin: 0px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 15px;
 }
 
 .content p {
@@ -95,6 +97,7 @@ header {
     font-size: 14px;
     box-shadow: 0 0 20px rgb(248, 248, 248);
     color: white;
+    margin: 5px;
 }
 
 
