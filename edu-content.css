@@ -3,6 +3,11 @@
     src: url('Musician\ -\ Demo.otf');
 }
 
+@font-face {
+    font-family: 'Celina Diary';
+    src: url('Celina\ Diary\ -\ Personal\ Use.otf')
+}
+
 body {
     background-image: url(books.jpg);
     background-size: cover;
@@ -68,7 +73,7 @@ header a {
 }
 
 .levels {
-    font-family: 'Musician';
+    font-family: 'Musician, Celina Diary';
     font-size: 120%;
     font-weight: bold;
     text-align: center;
