@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit your assignments</title>
+  <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+	<div class="top">
+		<h2>Send your assignments</h2>
+		<p>Starting price is &#x20A6;500</p>
+	</div>
+	<div class="container">
+		<form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" enctype="multipart/form-data">
+			<label for="name" style="display:none;">Name:</label>
+			<input class="input" type="text" id="name" name="entry.1234567890" placeholder="Name">
+			<label style="display:none;" type="text" for="email">Email:</label>
+			<input type="number" class="input" id="email" name="entry.2345678901" placeholder="WhatsApp Number" style="font-size: 18px;">
+			<div class="upload">
+				<label for="file">Upload File:</label><br>
+				<input type="file" id="file" name="file"><br>
+			</div>
+			<div class="submit">
+				<input class="submit-btn" type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+
+<footer>
+	<p>Since 2024|StreamPlex. All rights reserved.</p>
+</footer>
+</html>

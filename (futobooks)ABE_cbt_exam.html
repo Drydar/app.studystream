@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Exam Simulator</title>
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+    <header>
+        <img src="streamplex.png" width="130px" style="margin-bottom: 20px;">
+    </header>
+
+        <div class="navigation">
+            <p id="nav1">First Semester</p>
+            <p id="nav2">Second Semester</p>
+        </div>
+
+        <div class="content" id="first_semester_content">
+            <div class="search-container">
+                <h2>Search Your Course<br><b>first semester</b></h2>
+                <input type="text" class="searchInput" id="searchInput_first_semester" placeholder="Type to search...">
+            </div>
+            
+                <div id="courseList_first_semester">
+                    <p class="course_first_semester" onclick="location.href='(futobooks)ABE_cbt_exam(gst101).html';">GST101</p>
+                    <p class="course_first_semester" onclick="location.href='#';">ENG101</p>
+                    <p class="course_first_semester" onclick="location.href='#';">ENG103</p>
+                    <p class="course_first_semester" onclick="location.href='#';">GST103</p>
+                </div>
+        </div>
+
+        <div class="content" id="second_semester_content">
+            <div class="search-container">
+                <h2>Search Your Course<br><b>second semester</b></h2>
+                <input type="text" class="searchInput" id="searchInput_second_semester" placeholder="Type to search...">
+            </div>
+            
+                <div id="courseList_second_semester">
+                    <p class="course_second_semester" onclick="location.href='#';">ENG201</p>
+                    <p class="course_second_semester" onclick="location.href='#';">GST201</p>
+                    <p class="course_second_semester" onclick="location.href='#';">ENG203</p>
+                    <p class="course_second_semester" onclick="location.href='#';">GST203</p>
+                </div>
+        </div>
+</body>
+
+<script>
+        const nav1=document.getElementById('nav1');
+        const nav2=document.getElementById('nav2');
+        const first_semester_content=document.getElementById('first_semester_content');
+        const second_semester_content=document.getElementById('second_semester_content');
+
+        nav1.addEventListener('click', () => {
+            first_semester_content.classList.add('active');
+            second_semester_content.classList.remove('active');
+        });
+
+        nav2.addEventListener('click', () => {
+            first_semester_content.classList.remove('active');
+            second_semester_content.classList.add('active');
+        });
+
+        document.getElementById('searchInput_first_semester').addEventListener('input', function () {
+        const input = this.value.toLowerCase();
+        const departments = document.querySelectorAll('.course_first_semester');
+        let found = false;
+
+        departments.forEach(function (department) {
+            if (department.textContent.toLowerCase().includes(input)) {
+                department.style.display = 'block';
+                found = true;
+            } else {
+                department.style.display = 'none';
+            }
+        });
+
+        // Show the list only when there are matching results
+        document.getElementById('departmentList').style.display = found ? 'block' : 'none';
+    });
+
+    document.getElementById('searchInput_second_semester').addEventListener('input', function () {
+        const input = this.value.toLowerCase();
+        const departments = document.querySelectorAll('.course_second_semester');
+        let found = false;
+
+        departments.forEach(function (department) {
+            if (department.textContent.toLowerCase().includes(input)) {
+                department.style.display = 'block';
+                found = true;
+            } else {
+                department.style.display = 'none';
+            }
+        });
+
+        // Show the list only when there are matching results
+        document.getElementById('departmentList').style.display = found ? 'block' : 'none';
+    });
+</script>
+</html>

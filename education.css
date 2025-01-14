@@ -88,7 +88,6 @@ h1 {
 .faculties p {
     font-family: 'Roboto';
     border-radius: 10px;
-    border: none;
     background-color: rgb(66, 66, 66);
     box-shadow: 0 0 10px rgb(255, 255, 255);
     margin: 0px;
@@ -96,11 +95,13 @@ h1 {
     color:aliceblue;
     margin-top: 10px;
     text-align: center;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
 }
 
 .faculties p:hover {
-    background-color: rgba(121, 245, 245, 0.699);
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
