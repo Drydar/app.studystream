@@ -60,16 +60,16 @@ body {
 }
 
 .navigation {
-    background-color: rgba(43, 179, 184, 0.541);
+    background-color: rgba(0, 0, 0, 0.541);
     display: flex;
     flex-wrap: nowrap;
     font-family: 'Roboto';
-    font-weight: 500;
+    font-weight: 700;
     justify-content: space-around;
     padding: 2px;
     margin: 2px;
-    border-radius: 15px;
-    color: black;
+    border-radius: 10px;
+    color: white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.911);
 }
 
@@ -77,13 +77,13 @@ body {
     padding: 10px;
     margin: 2px;
     font-size: 18px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
+    text-shadow: 0 0 10px rgba(46, 191, 228, 0.911);
 }
 
 .navigation p:hover {
-    background-color: rgba(112, 68, 11, 0.253);
+    background-color: rgba(245, 245, 245, 0.425);
     color: black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 h2 {

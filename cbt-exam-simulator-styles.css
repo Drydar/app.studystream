@@ -9,14 +9,18 @@ header {
   top: 0;
   margin: 5px;
   padding: 5px;
+  color: white;
 }
 
 header h1 {
   font-family: 'Roboto';
-  margin-bottom: 35px;
   font-size: 23px;
   font-weight: 600;
   color: white;
+}
+
+header p {
+  font-weight: 200;
 }
 
 body {
@@ -37,7 +41,7 @@ body {
   background: #2a2b2a9c;
   padding: 20px;
   margin: 10px;
-  margin-top: 80px;
+  margin-top: 100px;
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.87);
   color: white;
@@ -135,10 +139,10 @@ button {
 
 .score {
   border: none;
-  background-color: rgba(235, 207, 207, 0.445);
+  background-color: rgba(235, 207, 207, 0.363);
   margin: 0px;
   padding: 5px;
-  width: 100%;
+  width: 97.5%;
   border-radius: 15px;
   padding-right: 10px;
 }
@@ -146,7 +150,7 @@ button {
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  font-size: 50%;
+  font-size: 70%;
   position: fixed;
   bottom: 0;
   right: 0;
