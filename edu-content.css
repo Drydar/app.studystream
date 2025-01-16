@@ -73,7 +73,7 @@ header a {
 }
 
 .levels {
-    font-family: 'Musician, Celina Diary';
+    font-family: 'Roboto';
     font-size: 120%;
     font-weight: bold;
     text-align: center;
@@ -97,15 +97,31 @@ header a {
 .list {
     display: inline-flex;
     gap: 10px;
-
 }
 
-.list img {
-    width: 40%;
+.list a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 40px;
     border-radius: 10px;
     border: none;
     box-shadow: 0 0 6px rgb(255, 255, 255);
     transition: transform 0.3s ease;
+    padding: 20px;
+    height: 100px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.986);
+    background-size: cover;
+    text-align: center;
+}
+
+.list p {
+    padding: 2px;
+    margin: 2px;
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .list img:hover {
