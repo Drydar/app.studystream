@@ -33,7 +33,7 @@ header a {
 }
 
 .top img {
-    width: 130px;
+    width: 150px;
 }
 
 .logo {
@@ -167,9 +167,7 @@ header a {
 
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 70%;
-    position:fixed;
-    bottom: 1%;
-    right: 1%;
+    font-size: 80%;
+    text-align: right;
     margin-top: 10px;
 }
