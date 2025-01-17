@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTO</title>
+    <link rel="stylesheet" href="edu-content.css">
+</head>
+<body>
+    <header class="top">
+        <img src="streamplex.png" style="margin-top: 15px;">
+    </header>
+    
+    <div class="the-head">
+        <header>
+            <h2 class="department">GEOLOGY</h2>
+        </header>
+
+        <div class="nav-container">
+            <div id="nav1" class="navigation">First Semester</div>
+            <div id="nav2" class="navigation">Second Semester</div>
+        </div>
+    </div>
+
+    <div id="firstsemester" class="content">
+        <h3 class="semester">FIRST SEMESTER</h3>   
+        <h3 class="levels">100 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+
+        
+        <h3 class="levels">200 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+                
+        <h3 class="levels">300 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+        
+        <h3 class="levels">400 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+
+        <h3 class="levels">500 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+    </div>
+    
+    <div id="secondsemester" class="content"> 
+        <h3 class="semester">SECOND SEMESTER</h3>    
+        <h3 class="levels">100 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+
+        <h3 class="levels">200 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+            
+        <h3 class="levels">300 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+
+        <h3 class="levels">400 level</h3>
+        <div class="courses">
+            <div class="list">
+                <p>I T</p>
+            </div>
+        </div>
+
+        <h3 class="levels">500 level</h3>
+        <div class="courses">
+            <div class="list">
+                <a href="#" style="background-image: url(3.jpg);">Not<br>available</a>
+                <!--<a href="(futobooks)gst101.html" style="background-image: url(10.jpg);">MTH<br>101</a>-->
+                <!--<a href="#" style="background-image: url(5.jpg);">GST<br>101</a>-->
+            </div>
+        </div>
+    </div>
+    <script>
+        const nav1=document.getElementById('nav1');
+        const nav2=document.getElementById('nav2');
+        const firstsemester=document.getElementById('firstsemester');
+        const secondsemester=document.getElementById('secondsemester');
+
+        nav1.addEventListener('click', () => {
+            firstsemester.classList.add('active');
+            secondsemester.classList.remove('active');
+        });
+
+        nav2.addEventListener('click', () => {
+            secondsemester.classList.add('active');
+            firstsemester.classList.remove('active');
+        });
+    </script>
+
+</body>
+
+<footer>
+    <p>&copy; Since 2024 |StudyStream. All rights resevered.</p>
+</footer>
+</html>
