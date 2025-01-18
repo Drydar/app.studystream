@@ -17,9 +17,16 @@
         </div>
     </header>
 
-
     <div class="faculties">
         <h2 class="head">Select a Faculty</h2>
+        <p id="faculty_CE_sPESS"><b>Centre for Excellence in Sustainable Procurement Environmental and Social Standard<br>(CE-sPESS)</b></p>
+        <div id="CE_sPESS" class="content">
+            <h4 class="department">Select a department</h4>
+            <p onclick="location.href='(futobooks)procurement_management.html';">Procurement Management</p>
+            <p onclick="location.href='(futobooks)sustainable_social_development.html';">Sustainable Social Development</p>
+            <p onclick="location.href='(futobooks)sustainable_environmental_studies.html';">Sustainable Environmental Studies</p>
+        </div>
+
         <p id="faculty_SAAT"><b>School of Agriculture and Agricultural Technology<br>(SAAT)</b></p>
         <div id="SAAT" class="content">
             <h4 class="department">Select a department</h4>
@@ -119,6 +126,7 @@
 </body>
 
 <script>
+        const faculty_CE_sPESS=document.getElementById('faculty_CE_sPESS')
         const faculty_SAAT=document.getElementById('faculty_SAAT');
         const faculty_SBMS=document.getElementById('faculty_SBMS');
         const faculty_SEET=document.getElementById('faculty_SEET');
@@ -130,6 +138,7 @@
         const faculty_SOHT=document.getElementById('faculty_SOHT');
         const faculty_SOPS=document.getElementById('faculty_SOPS');
         
+        const CE_sPESS=document.getElementById('CE_sPESS')
         const SAAT=document.getElementById('SAAT');
         const SBMS=document.getElementById('SBMS');
         const SEET=document.getElementById('SEET');
@@ -140,6 +149,20 @@
         const SOES=document.getElementById('SOES');
         const SOHT=document.getElementById('SOHT');
         const SOPS=document.getElementById('SOPS');
+
+        faculty_CE_sPESS.addEventListener('click', () => {
+            CE_sPESS.classList.add('active')
+            SAAT.classList.remove('active');
+            SBMS.classList.remove('active');
+            SEET.classList.remove('active');
+            SESET.classList.remove('active');
+            SICT.classList.remove('active');
+            SLIT.classList.remove('active');
+            SOBS.classList.remove('active');
+            SOES.classList.remove('active');
+            SOHT.classList.remove('active');
+            SOPS.classList.remove('active');
+        });
 
         faculty_SAAT.addEventListener('click', () => {
             SAAT.classList.add('active');
