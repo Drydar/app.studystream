@@ -13,7 +13,7 @@
             <p style="background-image: url(books.jpg); background-size: cover;" onclick="location.href='#';">CGPA<br>Calculator</p>
             <p style="background-image: url(home-cbt-image.png); background-size: cover;" onclick="location.href='cbt-simulator-home.html';">CBT<br>Simulator</p>
             <p style="background-image: url(assignments.jpg); background-size: cover;" onclick="location.href='submit_assignment.html';">Send your<br>assignments</p>
-            <p style="background-image: url(more.jpg); background-size: cover;" onclick="location.href='#';">See<br>More</p>
+            <p id="nav_see_more" style="background-image: url(more.jpg); background-size: cover;" onclick="location.href='see_more.html';">See<br>More</p>
         </div>
     </header>
 
@@ -30,6 +30,7 @@
         <p id="faculty_SAAT"><b>School of Agriculture and Agricultural Technology<br>(SAAT)</b></p>
         <div id="SAAT" class="content">
             <h4 class="department">Select a department</h4>
+            <p onclick="location.href='(futobooks)agribusiness.html';">Agribusiness</p>
             <p onclick="location.href='(futobooks)agricultural_economics.html';">Agricultural Economics</p>
             <p onclick="location.href='(futobooks)agricultural_extension.html';">Agricultural Extension</p>
             <p onclick="location.href='(futobooks)animal_science_and_technology.html';">Animal Science and Technology</p>
@@ -126,6 +127,7 @@
 </body>
 
 <script>
+
         const faculty_CE_sPESS=document.getElementById('faculty_CE_sPESS')
         const faculty_SAAT=document.getElementById('faculty_SAAT');
         const faculty_SBMS=document.getElementById('faculty_SBMS');
@@ -149,7 +151,7 @@
         const SOES=document.getElementById('SOES');
         const SOHT=document.getElementById('SOHT');
         const SOPS=document.getElementById('SOPS');
-
+        
         faculty_CE_sPESS.addEventListener('click', () => {
             CE_sPESS.classList.add('active')
             SAAT.classList.remove('active');

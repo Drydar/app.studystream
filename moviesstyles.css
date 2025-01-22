@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+    background-image: url(home.jpg);
+    background-size: cover;
+    color:rgb(189, 221, 217);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    text-align: left;
+    font-size: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 3px;
+    background-color: rgba(0, 0, 0, 0.699);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.527);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.genre /*for scroll*/ {
+    font-size: 130%;
+    font-family:sans-serif;
+    margin: 2%;
+    font-family: 'Roboto';
+}
+
+div a /*for scroll*/ {
+    text-decoration: none;
+}
+
+.action /*for scroll*/ {
+    overflow: hidden;
+    width: 100%;
+}
+
+.list /*for scroll*/ {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1px;
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {transform: translateX(-100%)}
+}
+
+.list img /*for scroll*/ {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;    
+}
+
+.the_movies /*for display*/ {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content:space-evenly;
+}
+
+.the_movies img /* for display*/ {
+    height: 120px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    object-fit: cover;
+}
+
+.view /*for scroll*/ {
+    text-align: right;
+    text-decoration:none;
+    display: block;
+    color: antiquewhite;
+    font-family: 'Roboto';
+    font-size: 17px;
+}
+
+.movies /*for scroll*/ {
+    border-radius: 20px;
+    background-color: rgba(14, 20, 20, 0.527);
+    border-width: 100%;
+    height: max-content;
+    margin: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.527);
+}
+
+.images /*for scroll*/ {
+    border-radius: 10px;
+    width: 30%;
+    padding: 3px;
+    margin: 3px;
+}
+
+.top-navigation /*for display*/ {
+    display:block;
+    text-align: right;
+    text-decoration: none;
+}
+
+.nav /*for display*/ {
+    font-family: Arial, Helvetica, sans-serif;
+    color:azure;
+    font-size: 70%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.search /*for list*/ {
+    text-align: left;
+    width: 97%;
+    height:max-content;
+    font-size: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 7px;
+    border: none;
+    height:fit-content;
+}
+
+.search_icon /*(for display*/ {
+    width:30px;
+    margin:1px;
+    margin-bottom: 25px;
+    padding: 0.6px;
+}
+
+footer {
+    font-family: 'Roboto';
+    font-size: 70%;
+    color: white;
+    font-weight: 600;
+    text-align: right;
+    padding: 4px;
+    margin: 4px;
+
+}

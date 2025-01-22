@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Downloads</title>
+    <link rel="stylesheet" href="moviesstyles.css">
+</head>
+<body>
+    <header>
+        <h1>Action...</h1>
+        <a href="hollywoodaction_list.html"><img src="search1.png" class="search_icon"></a>
+    </header> 
+        
+        <div id="item-list">
+            <section class="the_movies">
+                <img src="myspy2.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="hollywood.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="myspy2.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="hollywood.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="myspy2.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="hollywood.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="myspy2.jpeg">
+                <img src="kdrama.jpeg">
+                <img src="hollywood.jpeg">
+                <img src="kdrama.jpeg">
+            </section>
+        </div>
+
+<script>
+    function copyLink(linkId) {
+        var copyText = document.getElementById(linkId);
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+        alert("Copied: ");
+    }
+
+    const searchInput = document.getElementById('search-input');
+    const itemList = document.getElementById('item-list');
+    const items = itemList.getElementsByTagName('');
+
+    searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+    const itemName = items[i].textContent.toLowerCase();
+    if (itemName.includes(searchTerm)) {
+        items[i].style.display = 'block';
+        } else {
+        items[i].style.display = 'none';
+        }
+  }
+});
+
+</script>
+</body>
+</html>
