@@ -59,7 +59,7 @@ body{
     text-align: center;
     font-size: 60%;
     margin-bottom: 20px;
-    margin-top: 25px;
+    margin-top: 70px;
     font-family: 'Roboto';
     animation: moveLeft 2s ease-in-out forwards;
     position: absolute;
@@ -71,7 +71,7 @@ body{
         right: -500px;
     }
     100% {
-        right: 1px;
+        right: 1.5%;
     }
 }
 
