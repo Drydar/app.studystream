@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 1px;
+}
+
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+    margin:1px;
+    padding: 2px;
+}
+
+.genre {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    padding: 2px;
+    margin: 1px;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    gap: 20px;
+    justify-content:space-around;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navigation {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    cursor:pointer;
+    transition: background-color 0.2s ease;
+    margin: 2px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: none;
+    flex-basis: 100%;
+}
+
+.navigation:hover {
+    background-color: rgb(97, 92, 102);
+    border-radius: 15px;
+    border: none;
+}
+
+.novels {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.content {
+    display: none;
+    margin-top: 20px;
+    padding: 2px;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content.active {
+    display: block;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content:space-evenly;
+}
+
+.list img {
+    width: 30%;
+    border-radius: 15px;
+    border: none;
+}
+
+footer {
+    margin: 0px;
+    padding: 2px;
+    color: black;
+    text-align: right;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50%;
+    font-weight: bold;
+}

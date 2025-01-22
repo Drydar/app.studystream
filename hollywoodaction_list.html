@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Downloads</title>
+    <link rel="stylesheet" href="moviesstyles.css">
+</head>
+<body>
+    <div class="search">
+        <input class="search" type="search" id="search-input" placeholder="  ...movie name...">
+    </div> 
+        
+    <div id="item-list" class="movie-list">
+        <p>Avengers</p>
+        <p>Warriors</p>
+        <p>Drugs</p>
+        <p>Cartels</p>
+        <p>Peopls</p>
+        <p>Pushing</p>
+        <p>Age of Ultron</p>
+        <p>Pacific Rim</p>
+        <p>Iron Man</p>
+        <p>Bat man</p>
+        <p>Column</p>
+        <p>Freedom Fighters</p>
+        <p>Jumanji</p>
+        <p>Captain America</p>
+        <p>Winter Soldier</p>
+        <p>Snow White</p>
+        <p>Captain Marvel</p>
+        <p>Super Man</p>
+        <p>Green Lantern</p>
+        <p>Scooby Doo</p>
+    </div>
+
+<script>
+    function copyLink(linkId) {
+        var copyText = document.getElementById(linkId);
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+        alert("Copied: ");
+    }
+
+    const searchInput = document.getElementById('search-input');
+    const itemList = document.getElementById('item-list');
+    const items = itemList.getElementsByTagName('p');
+
+    searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+    for (let i = 0; i < items.length; i++) {
+    const itemName = items[i].textContent.toLowerCase();
+    if (itemName.includes(searchTerm)) {
+        items[i].style.display = 'block';
+        } else {
+        items[i].style.display = 'none';
+        }
+  }
+});
+
+</script>
+</body>
+</html>
