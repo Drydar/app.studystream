@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <title>FUTO</title>
+    <link rel="stylesheet" href="educational.css">
+</head>
+<body>
+    <div class="course">
+        <h1>CST202</h1>
+        <p style="font-size: 20px;">Tree and Vegetable Crop Production</p>
+    </div>
+    <div>
+        <div class="content" style="margin-top: 30px;">
+            <div class="category">
+                <ol class="topic" id="topic_1">1. The Beginning of Nigeria</ol>
+                <div class="subs" id="t_1">
+                    <p onclick="location.href='(futobooks)gst101(1)_lecture-notes.html';">Lecture Notes</p>
+                    <p onclick="location.href='gst101(1)_past-questions.html';">Past Questions</p>
+                    <p onclick="location.href='#';">Video tutorials <i>(if available)</i></p>
+                </div>
+            </div>
+            <div class="category">
+                <ol class="topic" id="topic_2">2. Things that happen in the country</ol>
+                <div class="subs" id="t_2">
+                    <p onclick="location.href='(futobooks)gst101(2)_lecture-notes.html';">Lecture Notes</p>
+                    <p onclick="location.href='gst101(2)_past-questions.html';">Past Questions</p>
+                    <p onclick="location.href='#';">Video tutorials <i>(if available)</i></p>
+                </div>
+            </div>
+            <div class="category">
+                <ol class="topic" id="topic_3">3. Problems of the Country</ol>
+                <div class="subs" id="t_3">
+                    <p onclick="location.href='#';">Lecture Notes</p>
+                    <p onclick="location.href='#';">Past Questions</p>
+                    <p onclick="location.href='#';">Video tutorials <i>(if available)</i></p>
+                </div>
+            </div>
+            <div class="category">
+                <ol class="topic" id="topic_4">4. People in the Country</ol>
+                <div class="subs" id="t_4">
+                    <p onclick="location.href='#';">Lecture Notes</p>
+                    <p onclick="location.href='#';">Past Questions</p>
+                    <p onclick="location.href='#';">Video tutorials <i>(if available)</i></p>
+                </div>
+            </div>
+            <div class="category">
+                <ol class="topic" id="topic_5">5. Solutions to the Country</ol>
+                <div class="subs" id="t_5">
+                    <p onclick="location.href='#';">Lecture Notes</p>
+                    <p onclick="location.href='#';">Past Questions</p>
+                    <p onclick="location.href='#';">Video tutorials <i>(if available)</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        const topic_1=document.getElementById('topic_1');
+        const topic_2=document.getElementById('topic_2');
+        const topic_3=document.getElementById('topic_3');
+        const topic_4=document.getElementById('topic_4');
+        const topic_5=document.getElementById('topic_5');
+        
+        const t_1=document.getElementById('t_1');
+        const t_2=document.getElementById('t_2');
+        const t_3=document.getElementById('t_3');
+        const t_4=document.getElementById('t_4');
+        const t_5=document.getElementById('t_5');
+
+        topic_1.addEventListener('click', () => {
+            t_1.classList.add('active');
+            t_2.classList.remove('active');
+            t_3.classList.remove('active');
+            t_4.classList.remove('active');
+            t_5.classList.remove('active');
+        });
+
+        topic_2.addEventListener('click', () => {
+            t_1.classList.remove('active');
+            t_2.classList.add('active');
+            t_3.classList.remove('active');
+            t_4.classList.remove('active');
+            t_5.classList.remove('active');
+        });
+
+        topic_3.addEventListener('click', () => {
+            t_1.classList.remove('active');
+            t_2.classList.remove('active');
+            t_3.classList.add('active');
+            t_4.classList.remove('active');
+            t_5.classList.remove('active');
+        });
+
+        topic_4.addEventListener('click', () => {
+            t_1.classList.remove('active');
+            t_2.classList.remove('active');
+            t_3.classList.remove('active');
+            t_4.classList.add('active');
+            t_5.classList.remove('active');
+        });
+
+        topic_5.addEventListener('click', () => {
+            t_1.classList.remove('active');
+            t_2.classList.remove('active');
+            t_3.classList.remove('active');
+            t_4.classList.remove('active');
+            t_5.classList.add('active');
+        });
+</script>
+<footer>
+    <p>&copy; Since 2024 |StudyStream. All rights resevered.</p>
+</footer>
+</html>
