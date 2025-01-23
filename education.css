@@ -49,6 +49,7 @@ h1 {
     margin-top: 30px;
     border: none;
     text-align: center;
+    text-decoration: underline 2px solid;
 }
 
 .explore {
@@ -89,8 +90,8 @@ h1 {
 .faculties p {
     font-family: 'Roboto';
     border-radius: 10px;
-    background-color: rgb(66, 66, 66);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: rgb(4, 92, 104);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     margin: 0px;
     padding: 20px;
     color:aliceblue;
@@ -113,6 +114,7 @@ h1 {
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0.616);
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
 }
 
 .content p {
@@ -134,7 +136,7 @@ footer {
     color: white;
     font-weight: bold;
     font-family: 'Roboto';
-    font-size: 70%;
+    font-size: 80%;
     margin: 2px;
     padding: 2px;
 }

@@ -51,6 +51,7 @@ header a {
 
 .the-head {
     background-color: rgba(255, 255, 255, 0.801);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     border-radius: 10px;
     margin: 1px;
     padding: 10px;
@@ -70,6 +71,12 @@ header a {
     font-size: 140%;
     font-weight: bold;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.829);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.966);
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    margin: 15px 0 5px 0;
 }
 
 .levels {
@@ -90,13 +97,13 @@ header a {
     padding: 10px;
     margin: 0px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: rgba(0, 0, 0, 0.87);
     border-radius: 15px;
 }
 
 .list {
     display: inline-flex;
-    gap: 10px;
+    gap: 16px;
 }
 
 .list a {
@@ -166,7 +173,8 @@ header a {
 }
 
 footer {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
+    font-weight: 600;
     font-size: 80%;
     text-align: right;
     margin-top: 10px;
