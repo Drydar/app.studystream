@@ -15,7 +15,7 @@ body {
 
 header {
     background-color: rgb(37, 37, 37);
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(245, 245, 245);
     color: white;
     font-family: 'Ampher';
     font-weight: 200;
