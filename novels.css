@@ -1,18 +1,24 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.87);
     color: white;
     padding: 1px;
 }
 
 header {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 90%;
+    font-family: 'Roboto';
+    font-size: 100%;
     margin:1px;
+    font-weight: 800;
     padding: 2px;
 }
 
 .genre {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     font-size: 100%;
     padding: 2px;
     margin: 1px;
@@ -22,25 +28,28 @@ header {
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
-    gap: 20px;
+    gap: 11px;
     justify-content:space-around;
     text-align: center;
     font-family: 'Roboto';
     font-weight: bold;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .navigation {
     width: 100%;
-    padding: 10px;
-    color: black;
+    padding: 9px;
+    color: white;
     cursor:pointer;
     transition: background-color 0.2s ease;
+    font-family: 'Roboto';
     margin: 2px;
-    background-color: antiquewhite;
+    background-color: rgba(7, 116, 179, 0.548);
     border-radius: 10px;
     border: none;
     flex-basis: 100%;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 .navigation:hover {
@@ -52,12 +61,15 @@ header {
 .novels {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 10px;
 }
 .content {
     display: none;
     margin-top: 20px;
     padding: 2px;
-    background-color: black;
+    background-color: transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,13 +81,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    text-align: left;
 }
 
 .list img {
-    width: 30%;
-    border-radius: 15px;
+    width: 85px;
+    border-radius: 4px;
     border: none;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.973);
 }
 
 footer {
@@ -83,7 +97,8 @@ footer {
     padding: 2px;
     color: black;
     text-align: right;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50%;
+    font-family: 'Roboto';
+    font-size: 80%;
+    color: white;
     font-weight: bold;
 }
