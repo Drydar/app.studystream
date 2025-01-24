@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+    background-color: rgb(214, 210, 210);
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.container {
+    margin: 15px 4px 0 4px;
+}
+
+form {
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(56, 58, 59, 0.733);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    font-size: 17px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+textarea {
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
+    font-size: 17px;
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+.submit {
+    margin-top: 15px;
+    font-weight: 600;
+    background-color: rgba(148, 147, 147, 0.877);
+    width: 110px;
+    border-radius: 6px;
+    box-shadow: 0 0 7px rgb(255, 255, 255);
+}
+
+.submit:active {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    font-size: 80%;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 4px;
+    padding: 3px;
+}
