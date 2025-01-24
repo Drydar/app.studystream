@@ -17,6 +17,7 @@
         <div id="navlife" class="navigation">Life</div>
         <div id="naventertainment" class="navigation">Entertainment</div>
         <div id="navmystery" class="navigation">Mystery</div>
+        <div id="navfiction" class="navigation">Fiction</div>
     </div>
     
     <div id="romance" class="content">      
@@ -117,6 +118,19 @@
             </div>
     </div>
 
+    <div id="fiction" class="content">      
+        <h3 class="novels">FICTION</h3>
+            <div class="list">
+                <img src="1.jpg" onclick="location.href='index.html';" alt="1984">
+                <img src="15.jpg" onclick="location.href='idnex.html';">
+                <img src="2.jpg" onclick="location.href='index.html';">
+                <img src="3.jpg" onclick="location.href='index.html';">
+                <img src="10.jpg" onclick="location.href='idnex.html';">
+                <img src="14.jpg" onclick="location.href='index.html';">
+                <img src="4.jpg" onclick="location.href='index.html';">
+            </div>
+    </div>
+
     <script>
         const navromance=document.getElementById('navromance');
         const navadventure=document.getElementById('navadventure');
@@ -124,6 +138,7 @@
         const navlife=document.getElementById('navlife');
         const naventertainment=document.getElementById('naventertainment');
         const navmystery=document.getElementById('navmystery');
+        const navfiction=document.getElementById('navfiction');
         
         const romance=document.getElementById('romance');
         const adventure=document.getElementById('adventure');
@@ -131,6 +146,7 @@
         const life=document.getElementById('life');
         const entertainment=document.getElementById('entertainment');
         const mystery=document.getElementById('mystery');
+        const fiction=document.getElementById('fiction');
 
         navromance.addEventListener('click', () => {
             romance.classList.add('active');
@@ -139,6 +155,7 @@
             life.classList.remove('active');
             entertainment.classList.remove('active');
             mystery.classList.remove('active');
+            fiction.classList.remove('active');
         });
 
         navadventure.addEventListener('click', () => {
@@ -148,6 +165,7 @@
             life.classList.remove('active');
             entertainment.classList.remove('active');
             mystery.classList.remove('active');
+            fiction.classList.remove('active');
         });
 
         navhighschool.addEventListener('click', () => {
@@ -157,6 +175,7 @@
             life.classList.remove('active');
             entertainment.classList.remove('active');
             mystery.classList.remove('active');
+            fiction.classList.remove('active');
         });
 
         navlife.addEventListener('click', () => {
@@ -166,6 +185,7 @@
             life.classList.add('active');
             entertainment.classList.remove('active');
             mystery.classList.remove('active');
+            fiction.classList.remove('active');
         });
 
         naventertainment.addEventListener('click', () => {
@@ -175,6 +195,7 @@
             life.classList.remove('active');
             entertainment.classList.add('active');
             mystery.classList.remove('active');
+            fiction.classList.remove('active');
         });
 
         navmystery.addEventListener('click', () => {
@@ -184,6 +205,17 @@
             life.classList.remove('active');
             entertainment.classList.remove('active');
             mystery.classList.add('active');
+            fiction.classList.remove('active');
+        });
+
+        navfiction.addEventListener('click', () => {
+            romance.classList.remove('active');
+            adventure.classList.remove('active');
+            highschool.classList.remove('active');
+            life.classList.remove('active');
+            entertainment.classList.remove('active');
+            mystery.classList.remove('active');
+            fiction.classList.add('active');
         });
     </script>
 
