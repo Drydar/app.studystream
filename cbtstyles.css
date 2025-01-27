@@ -23,6 +23,7 @@ header {
     padding:5px;
     font-size: 80%;
     font-family: 'Roboto';
+    text-align: center;
 }
 
 #score-container {

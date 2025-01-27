@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBT Simulator with Score</title>
+  <link rel="stylesheet" href="cbtstyles.css">
+</head>
+<header>
+    <h2>PAST QUESTIONS<br>on<br>Mechanics (Space and Time)</h2>
+</header>
+<body>
+  <div class="container">
+    <div id="score-container">
+      <p>Score: <span id="score">0</span> / <span id="total">0</span></p>
+      <p>Progress: <span id="progress">0</span>%</p>
+    </div>
+    <div id="question-container">
+      <p id="question-text">Question will appear here</p>
+      <div id="options-container"></div>
+    </div>
+    <div style="display: flex; flex-wrap: nowrap; justify-content: space-between;">
+      <button id="prev-button" onclick="loadPreviousQuestion()">Previous Question</button>
+      <button id="next-button" onclick="loadNextQuestion()">Next Question</button>
+    </div>
+
+  </div>
+  <script>
+    const questions = [
+  {
+    question: "1. What is the capital of France?",
+    options: ["A. Berlin", "B. Madrid", "C. Paris", "D. Rome"],
+    correctAnswer: 2,
+  },
+  {
+    question: "2. What is 5 + 3?",
+    options: ["A. 5", "B. 8", "C. 10", "D. 15"],
+    correctAnswer: 1,
+  },
+  {
+    question: "3. Which planet is known as the Red Planet?",
+    options: ["A. Earth", "B. Mars", "C. Jupiter", "D. Venus"],
+    correctAnswer: 1,
+  },
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+let userAnswers = Array(questions.length).fill(null); // Stores user answers (null by default)
+
+// Initialize total questions
+document.getElementById("total").textContent = questions.length;
+
+function loadQuestion() {
+  const questionContainer = document.getElementById("question-container");
+  const questionText = document.getElementById("question-text");
+  const optionsContainer = document.getElementById("options-container");
+
+  // Clear previous options
+  optionsContainer.innerHTML = "";
+
+  // Load current question
+  const currentQuestion = questions[currentQuestionIndex];
+  questionText.textContent = currentQuestion.question;
+
+  // Load options and pre-select if the user has answered
+  currentQuestion.options.forEach((option, index) => {
+    const optionButton = document.createElement("button");
+    optionButton.textContent = option;
+    optionButton.classList.add("option");
+    optionButton.onclick = () => handleAnswer(index);
+
+    // Highlight previously selected answer
+    if (userAnswers[currentQuestionIndex] === index) {
+      optionButton.classList.add(
+        index === currentQuestion.correctAnswer ? "correct" : "wrong"
+      );
+    }
+
+    optionsContainer.appendChild(optionButton);
+  });
+
+  updateProgress();
+}
+
+function handleAnswer(selectedIndex) {
+  const currentQuestion = questions[currentQuestionIndex];
+  const options = document.querySelectorAll(".option");
+
+  // Save user's answer
+  userAnswers[currentQuestionIndex] = selectedIndex;
+
+  // Highlight correct and wrong answers
+  options.forEach((option, index) => {
+    option.classList.remove("correct", "wrong");
+    if (index === currentQuestion.correctAnswer) {
+      option.classList.add("correct");
+    } else if (index === selectedIndex) {
+      option.classList.add("wrong");
+    }
+    option.onclick = null; // Disable further clicks
+  });
+
+  // Update score
+  score = userAnswers.reduce(
+    (acc, answer, idx) =>
+      answer === questions[idx].correctAnswer ? acc + 1 : acc,
+    0
+  );
+  updateScore();
+}
+
+function loadNextQuestion() {
+  if (currentQuestionIndex < questions.length - 1) {
+    currentQuestionIndex++;
+    loadQuestion();
+  } else {
+    const questionContainer = document.getElementById("question-container");
+    questionContainer.innerHTML = `
+      <p>Completed..!</p>
+      <p>Your final score is ${score} / ${questions.length}.</p>
+    `;
+    document.querySelector(".button-container").style.display = "none";
+  }
+}
+
+function loadPreviousQuestion() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    loadQuestion();
+  }
+}
+
+function updateScore() {
+  document.getElementById("score").textContent = score;
+}
+
+function updateProgress() {
+  const progress = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+  document.getElementById("progress").textContent = progress;
+}
+
+// Initialize the quiz
+loadQuestion();
+  </script>
+</body>
+<footer>
+    <p>Since 2024|StudyStream. All rights reserved.</p>
+</footer>
+</html>
