@@ -33,7 +33,7 @@ header a {
 }
 
 .top img {
-    width: 150px;
+    display: none;
 }
 
 .logo {
@@ -58,6 +58,7 @@ header a {
     margin-top: 10px;
     color: black;
 }
+
 
 .department {
     font-size: 22px;
