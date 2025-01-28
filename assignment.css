@@ -35,6 +35,15 @@
   .top h3{
     margin-top: 10px;
   }
+
+  .next {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 1px 5px 1px 5px;
+  }
   body {
     font-family: Arial, sans-serif;
     background-color: #e4e0e0;
@@ -49,8 +58,8 @@ form {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    background-color: rgba(231, 230, 230, 0.473);
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.712);
     padding: 15px;
     width: 95%;
     border-radius: 7px;
@@ -59,31 +68,31 @@ form {
 
 input {
     border-radius: 5px;
-    padding:10px;
+    padding:7px;
     border: none;
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: 14px;
     margin: 1px;
     font-weight: 400;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.986);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
 }
 
 button {
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 7px;
+  padding: 7px;
   margin: 0px;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(23, 80, 238);
   border: none;
   color: white;
   margin-top: 15px;
   width: 100%;
   font-family: 'Roboto';
   font-size: 17px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.986);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.986);
 }
 
-button:hover {
-  background-color: black;
+button:active {
+  background-color: rgb(14, 27, 204);
   font-weight: 700;
   box-shadow: 0 0 10px rgba(73, 210, 219, 0.918);
 }
