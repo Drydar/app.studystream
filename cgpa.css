@@ -62,7 +62,7 @@ h1 {
 .course {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 15px;
 }
 
@@ -80,11 +80,22 @@ label {
 select,
 input {
     padding: 5px;
-    font-size: 16px;
+    font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 150px;
+    width: 100px;
     box-shadow: 0 0 10 rgba(0, 0, 0, 0.884);
+    font-family: 'Roboto';
+}
+
+.unit {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.credits {
+    width: 90px;
 }
 
 button {

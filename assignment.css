@@ -19,22 +19,25 @@
   }
 
 .top {
-    position: absolute;
-    top: 20px;
-    margin-top: 66px;
-    background-color: rgba(255, 255, 255, 0.808);
-    width: 97%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 251, 251, 0.63);
+    width: 100%;
     color: black;
     font-family: 'Roboto';
     text-align: center;
     padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.904);
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+  }
+
+  .top h3{
+    margin-top: 10px;
   }
   body {
     font-family: Arial, sans-serif;
-    background-image: url(9.jpg);
-    background-size: cover;
+    background-color: #e4e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,14 +46,14 @@
   }
   
 form {
-    margin-top: 90px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     background-color: rgba(231, 230, 230, 0.473);
     padding: 15px;
     width: 95%;
-    border-radius: 15px;
+    border-radius: 7px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.945);
 }
 
@@ -94,4 +97,5 @@ footer {
     right: 0;
     margin: 5px;
     padding: 10px;
+    color: black;
   }
