@@ -8,26 +8,38 @@
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
 body {
-    background-image: url(books.jpg);
+    background-color: rgb(240, 238, 238);
     background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
 header {
     background-color: rgb(37, 37, 37);
     box-shadow: 0 0 10px rgb(245, 245, 245);
     color: white;
-    font-family: 'Ampher';
-    font-weight: 200;
-    border-radius: 20px;
+    font-family: 'Mordis';
+    font-weight: 100;
     border: none;
     padding: 5px;
-    margin: 1px;
+    margin: 0;
     font-size: 13px;
+    width: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-h1 {
-    margin: 10px;
+header h1 {
+    margin: 10px 0 0 10px;
+    font-weight: 200;
+    font-size: 30px;
 }
 .head {
     font-family: 'Roboto';
@@ -58,8 +70,8 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 25%;
-    justify-content: space-around;
-    margin: 3px;
+    justify-content: space-evenly;
+    margin: 0px 3px 3px 3px;
     padding: 3px;
     font-size: 14px;
 }
@@ -69,10 +81,10 @@ h1 {
     font-weight: 800;
     font-size: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color: rgb(136, 131, 131);
     border: none;
-    padding: 15px;
+    padding: 10px 15px 10px 15px;
     width: 35%;
     margin: 1px;
     gap: 5px;
@@ -85,20 +97,26 @@ h1 {
 
 .faculties {
     padding: 3px;
-    margin: 0px;
+    margin: 240px 10px 0px 10px;
 }
+
+.faculties h2{
+    color: black;
+}
+
 .faculties p {
     font-family: 'Roboto';
     border-radius: 10px;
-    background-color: rgba(5, 125, 141, 0.877);
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.904);
     margin: 0px;
     padding: 20px;
-    color:aliceblue;
+    color:rgb(46, 45, 45);
     margin-top: 10px;
     text-align: center;
     font-weight: 800;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.918);
+    font-size: 15px;
 }
 
 .faculties p:active {
@@ -132,11 +150,31 @@ h1 {
 }
 
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
     text-align: right;
-    color: white;
+    color: black;
     font-weight: bold;
     font-family: 'Roboto';
     font-size: 80%;
-    margin: 2px;
+    margin: 2px 8px 2px 2px;
     padding: 2px;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

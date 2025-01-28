@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px 0 0 10px;
+    gap: 5px;
+}
+
+header h1 {
+    font-family: 'Mordis';
+}
+
+header img {
+    width: 45px;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transfrom: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: #e9e4e4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff85;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    font-family: 'Roboto';
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto';
+    color: #333;
+    font-size: 25px;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+}
+
+label {
+    margin-right: 10px;
+    color: #555;
+}
+
+select,
+input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.884);
+}
+
+button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0056b3;
+}
+
+#result {
+    text-align: center;
+    color: #007bff;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+option {
+    font-family: 'Roboto';
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+}
+
+form {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+footer {
+    font-family: 'Roboto';
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 13px 5px 0;
+    padding: 4px;
+    font-size: 13px;
+}

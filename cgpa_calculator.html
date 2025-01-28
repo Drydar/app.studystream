@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="cgpa.css">
+</head>
+<body>
+    <header>
+        <img src="streamplex.png">
+        <h1>StreamPlex</h1>
+    </header>
+    <div class="container">
+        <h1>Semester GPA Calculator</h1>
+        <form id="gpa-form">
+            <div id="courses-container">
+                <div class="course">
+                    <label for="grade-1">Course 1</label>
+                    <select id="grade-1" class="grade" required>
+                        <option value="" disabled selected>Select grade</option>
+                        <option value="5">A</option>
+                        <option value="4">B</option>
+                        <option value="3">C</option>
+                        <option value="2">D</option>
+                        <option value="1">E</option>
+                        <option value="0">F</option>
+                    </select>
+                    <label for="credits-1">Units</label>
+                    <input type="number" id="credits-1" class="credits" min="1" required>
+                </div>
+            </div>
+            <div class="bottom">
+                <button type="button" id="add-course">Add Course</button>
+                <button type="submit">Calculate GPA</button>
+            </div>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+    <script src="cgpa.js"></script>
+</body>
+
+<footer>
+    <p>&copy; Rydar-Tech Group</p>
+</footer>
+</html>
