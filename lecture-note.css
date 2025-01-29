@@ -1,48 +1,107 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
 body {
-    background-image: url(cbt-wallpaper.jpg);
-    background-size: cover;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 80%;
-    font-weight: bold;
+    background-color: rgb(220, 247, 243);
+    color: black;
+    font-family: 'Roboto';
     text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.images {
-    margin: 10px;
-    line-height: 1px;
-}
-
-img {
-    border: none;
-    display: flex;
-    flex-wrap: nowrap;
-    border-radius: 15px;
-    margin-left: 1px;
-    margin-right: 1px;
+.header {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 700;
     padding: 1px;
-    object-fit: cover;
+    padding-bottom: 10px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.966);
+}
+
+.top {
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-bottom: 10px;
-    margin-top: 3px;
+    background-color: rgb(102, 182, 168);
+    box-shadow: 0 0 10px rgb(3, 3, 3);
+    gap: 1;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 0 10px;
+}
+
+.name img {
+    width: 35px;
+    animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+    from { 
+        transfrom: rotate (0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.name p {
+    font-family: 'Mordis';
+    font-size: 20px;
+}
+.content {
+    margin: 12px;
+    background-color:rgba(186, 240, 235, 0.178);
+    padding: 2px 10px 2px 10px;
+    border-radius: 6px;
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 130px;
+    font-weight: 500;
+    line-height: 2;
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.829);
+    margin-bottom: 50px;
+
 }
 
 footer {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50%;
-    text-align: right;
+    font-family: "Roboto";
+    font-size: 11px;
+    text-align: left;
+    margin: 3px;
+    padding: 3px;
+    font-weight: 600;
 }
 
 .ask-question {
     position: fixed;
-    bottom: 25px;
+    bottom: 20px;
     right: 0;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 5px 0 0 0;
     padding: 5px;
+    background-color: rgba(0, 0, 0, 0.842);
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px 0 0 10px;
+    font-family: 'Roboto';
 }
 
 .ask-question img {
-    width: 60px;
+    width: 30px;
+    height: 30px;
 }
