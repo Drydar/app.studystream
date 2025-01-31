@@ -2,67 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamPlex</title>
-    <link rel="stylesheet" href="page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <title>Welcome-StreamPlex</title>
+    <link rel="stylesheet" href="welcome.css">
 </head>
 <body>
-    <header>
-        <div class="image">
-            <div class="top">
-                <img class="logo" src="streamplex.png">
-                <div class="my">
-                    <h1>StreamPlex<p>Rydar-Tech Group</p></h1>
-                </div>
-            </div>
-            <img src="home-pic.png" class="home-pic">
-        </div>
-    </header>
-    <main>
-        <p class="select">Select your Faculty</p>
-        <div class="content">
-            <a href="#">CE-sPESS</a>
-            <a href="#">S.A.A.T</a>
-            <a href="#">S.B.M.S</a>
-            <a href="#">S.E.E.T</a>
-            <a href="#">S.E.S.E.T</a>
-            <a href="#">S.I.C.T</a>
-            <a href="#">S.O.B.S</a>
-            <a href="#">S.O.E.S</a>
-            <a href="#">S.O.H.T</a>
-            <a href="#">S.O.P.S</a>
-        </div>
-    </main>
+    <div class="middle">
+        <img src="streamplex.png">
+        <p>your ultimate digital library</p>
+    </div>
+    <h1>StreamPlex</h1>
 </body>
-
-<div class="bottom-navigation">
-    <style>
-        #nav__1 {
-            width: 28px;
-            height: 26px;
-            background-color: rgb(75, 73, 107);
-            border-radius: 50%;
-            padding: 8px;
-            padding-top: 9px;
-            justify-content: center;
-            box-shadow: 0 0 10px rgba(230, 229, 229);
-        }
-    </style>
-
-    <div class="navig" id="nav__1" onclick="location.href='index.html';">
-        <img src="home.png">
-    </div>
-    <div class="navig" id="nav__2"  onclick="location.href='submit_assignment.html';">
-        <img src="assignment.png">
-        <p>Assignment<br>Review</p>
-    </div>
-    <div class="navig" id="nav__3" onclick="location.href='cbt-simulator-home.html';">
-        <img src="cbt.png">
-        <p>CBT<br>Practice</p>
-    </div>
-    <div class="navig" id="nav__4" onclick="location.href='cgpa_calculator.html';">
-        <img src="cgpa.png">
-        <p>CGPA<br>Calculator</p>
-    </div>
-</div>
+<footer>
+    <p>Rydar-Tech Group</p>
+</footer>
+<script>
+    setTimeout(function() {
+        window.location.href="education.html";
+    }, 2000);
+</script>
 </html>
