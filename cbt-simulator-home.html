@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="exam.css">
 </head>
 <body>
-    <header>
-        <img src="streamplex.png" width="130px" style="margin-bottom: 20px;">
-    </header>
-
         <div class="navigation">
             <p id="nav1">100 LEVEL</p>
             <p id="nav2">200 LEVEL</p>
@@ -144,6 +140,35 @@
                 </div>
         </div>
 </body>
+<div class="bottom-navigation">
+    <style>
+        #nav__3 {
+            width: 28px;
+            height: 26px;
+            background-color: rgb(75, 73, 107);
+            border-radius: 50%;
+            padding: 8px;
+            padding-top: 9px;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(230, 229, 229);
+        }
+    </style>
+
+    <div class="navig" id="nav__1" onclick="location.href='index.html';">
+        <img src="home.png">
+        <p>Home</p>
+    </div>
+    <div class="navig" id="nav__2"  onclick="location.href='submit_assignment.html';">
+        <img src="assignment.png">
+        <p>Assignment<br>Review</p>
+    </div>
+    <div class="navig" id="nav__3" onclick="location.href='cbt-simulator-home.html';">
+        <img src="cbt.png">
+    </div>
+    <div class="navig" id="nav__4" onclick="location.href='cgpa_calculator.html';">
+        <img src="cgpa.png">
+        <p>CGPA<br>Calculator</p>
+    </div>
 
 <script>
         const nav1=document.getElementById('nav1');

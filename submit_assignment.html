@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUTO</title>
     <link rel="stylesheet" href="assignment.css">
 </head>
@@ -22,8 +22,34 @@
         <button type="submit">Submit</button>
     </form>
 </body>
+<div class="bottom-navigation">
+    <style>
+        #nav__2 {
+            width: 45px;
+            height: 44px;
+            background-color: rgb(75, 73, 107);
+            border-radius: 50%;
+            padding: 8px;
+            padding-top: 13px;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(230, 229, 229);
+        }
+    </style>
 
-<footer>
-    <p>&copy; StudyStream. All rights resevered.</p>
-</footer>
+    <div class="navig" id="nav__1" onclick="location.href='index.html';">
+        <img src="home.png">
+        <p>Home</p>
+    </div>
+    <div class="navig" id="nav__2" onclick="location.href='submit_assignment.html';">
+        <img src="assignment.png">
+    </div>
+    <div class="navig" id="nav__3" onclick="location.href='cbt-simulator-home.html';">
+        <img src="cbt.png">
+        <p>CBT<br>Practice</p>
+    </div>
+    <div class="navig" id="nav__4" onclick="location.href='cgpa_calculator.html';">
+        <img src="cgpa.png">
+        <p>CGPA<br>Calculator</p>
+    </div>
+</div>
 </html>
