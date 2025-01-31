@@ -3,6 +3,11 @@
   src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 
+@font-face {
+  font-family: 'Math';
+  src: url('NotoSansMath-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,10 +26,10 @@
 .top {
     position: fixed;
     top: 0;
-    background-color: rgba(255, 251, 251, 0.63);
+    background-color: #2186f1;
     width: 100%;
     color: black;
-    font-family: 'Roboto';
+    font-family: 'Math';
     text-align: center;
     padding: 5px;
     border-radius: 0 0 10px 10px;

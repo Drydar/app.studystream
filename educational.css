@@ -11,19 +11,24 @@ body {
 
 .course {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
     font-size: 15px;
     color: white;
     background-color: rgb(65, 64, 64);
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.842);
     margin: 0px;
-    padding: 14px;
+    padding: 11px;
     margin-bottom: 10px;
     position: fixed;
     top: 0;
     line-height: 0.5;
     width: 99%;
+}
+
+.course h1 {
+    font-size: 32px;
+    font-weight: 800;
 }
 
 .course p {

@@ -3,8 +3,13 @@
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
 body {
-    background-image: url(cbt-home.jpg);
+    background-color: rgba(228, 223, 223, 0.568);
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -40,7 +45,7 @@ body {
 
 .department_100 {
     padding: 10px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #000000b7;
     display: none;
 }
 .course_first_semester {
@@ -61,17 +66,17 @@ body {
 }
 
 .navigation {
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: #007bff;
     display: flex;
     flex-wrap: nowrap;
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-weight: 700;
     justify-content: space-around;
     padding: 2px;
-    margin: 2px;
+    margin: 2px 5px 2px 5px;
     border-radius: 10px;
     color: white;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.911);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.911);
 }
 
 .navigation p {
@@ -94,10 +99,10 @@ h2 {
 }
 .content {
     display: none;
-    background-color: rgba(204, 199, 199, 0.616);
+    background-color: rgba(109, 211, 230, 0.616);
     border-radius: 10px;
     padding: 0px;
-    margin: 0px;
+    margin: 5px;
 }
 
 .content.active {
