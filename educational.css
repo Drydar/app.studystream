@@ -18,10 +18,11 @@ body {
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.842);
     margin: 0px;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 10px;
     position: fixed;
     top: 0;
+    line-height: 0.5;
     width: 99%;
 }
 
@@ -30,7 +31,6 @@ body {
 }
 
 .content {
-    margin-top: 400px;
     padding: 1px;
     margin: 1px;
     line-height: 1;
@@ -42,11 +42,11 @@ body {
     font-weight: 500;
     background-color: rgba(99, 96, 96, 0.178);
     box-shadow: 0 0 10px rgb(0, 0, 0);
-    padding: 15px;
+    padding: 11px;
     border-radius: 10px;
     border: none;
     margin: 3px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .topic:active {
@@ -66,13 +66,13 @@ body {
 .subs p {
     font-family: 'Roboto';
     border-radius: 10px;
-    padding: 15px;
+    padding: 11px;
     margin: 5px;
     margin-left: 60px;
-    background-color: rgba(31, 30, 30, 0.842);
-    color: white;
-    margin-top: 10px;
-    box-shadow: 0 0 7px rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.747);
+    color: black;
+    margin-top: 6px;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 .subs p:active {
