@@ -127,10 +127,15 @@ main p {
     text-align: center;
     font-weight: 800;
     border-radius: 10px;
-    padding: 8%;
+    padding: 50px 30px 50px 30px;
     margin: 3px;
+    flex-basis: 30%;
     margin-bottom: 10px;
     box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.departments {
+    display: none;
 }
 
 .bottom-navigation {
