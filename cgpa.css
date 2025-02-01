@@ -137,7 +137,7 @@ form {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 100%;
-    height: 50px;
+    height: 65px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -150,7 +150,7 @@ form {
 
 .navig {
     font-family: 'Roboto';
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
     padding: 7px;
     line-height: 0;
@@ -163,7 +163,7 @@ form {
 }
 
 .navig img {
-    width: 20px;
+    width: 25px;
 }
 
 .navig:active {
