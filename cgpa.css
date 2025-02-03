@@ -146,8 +146,8 @@ form {
     text-align: center;
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: #0e91e9;
+    color: black;
+    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
     border-radius: 9px 9px 0 0;
     align-items: center;
     box-shadow: 0 0 10px rgb(0, 0, 0);
