@@ -80,7 +80,7 @@ body {
 
 .first {
     margin: 12px;
-    background-color:rgba(0, 0, 0, 0.075);
+    background-color:rgb(255, 255, 255);
     padding: 2px 10px 5px 10px;
     border-radius: 6px;
     text-align: justify;
@@ -93,7 +93,7 @@ body {
 
 .continuation {
     margin: 12px;
-    background-color:rgba(0, 0, 0, 0.075);
+    background-color:rgb(255, 255, 255);
     padding: 2px 10px 5px 10px;
     border-radius: 6px;
     text-align: justify;
