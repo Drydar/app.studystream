@@ -8,6 +8,11 @@
   src: url('NotoSansMath-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Mordis';
+  src: url('Mordis.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,10 +28,40 @@
     font-size: 15px;
   }
 
-.top {
+.intro {
     position: fixed;
     top: 0;
-    background-color: #2186f1;
+    width: 100%;
+    display: flex;
+    color: black;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    font-family: "Mordis";
+    font-weight: 600;
+    font-size: 25px;
+    padding: 13px;
+    padding-top: 15px;
+}
+
+.intro img {
+    width: 45px;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+      tranform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.top {
+    position: fixed;
+    top: 40px;
+    background-color: transparent;
     width: 100%;
     color: black;
     font-family: 'Math';
@@ -34,7 +69,7 @@
     padding: 5px;
     border-radius: 0 0 10px 10px;
     margin: 0;
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.479);
   }
 
   .top h3{
@@ -50,8 +85,8 @@
     padding: 1px 5px 1px 5px;
   }
   body {
-    font-family: Arial, sans-serif;
-    background-color: #e4e0e0;
+    font-family: 'Math';
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,14 +121,14 @@ button {
   border-radius: 7px;
   padding: 7px;
   margin: 0px;
-  background-color: rgb(23, 80, 238);
+  background-color: #007bff;
   border: none;
   color: white;
   margin-top: 15px;
   width: 100%;
-  font-family: 'Roboto';
+  font-family: 'Math';
   font-size: 17px;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.986);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.459);
 }
 
 button:active {
