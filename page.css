@@ -14,14 +14,16 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, white, rgba(255, 68, 0, 0.274), rgba(255, 68, 0, 0.575), orangered);
+    background-color: whitesmoke;
+    /*background-image: linear-gradient(to bottom, white, rgba(255, 68, 0, 0.274), rgba(255, 68, 0, 0.575), orangered);*/
     padding: 0;
     margin: 0;
 }
 
 header {
-    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);
+    background-color: whitesmoke;
+    /*background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.438);*/
     margin: 0px;
     padding: 5px 3px 25px 3px;
     position: fixed;
@@ -51,9 +53,9 @@ header {
 
 header p {
     font-family: 'Math';
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
-    padding-left: 145px;
+    padding-left: 150px;
     margin-top: -12px;
     color: black;
 }
@@ -217,16 +219,16 @@ main p {
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgb(52, 181, 241);
+    background-color: rgb(52, 102, 241);
     color: black;
-    padding: 15px;
+    padding: 18px;
     padding-bottom: 15px;
     border-radius: 20px;
     display:flow-root;
     width: 90%;
     gap: 1px;
     transition: bottom 0.3s ease-in-out;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.918);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.918);
 }
 
 .popupBox p {
