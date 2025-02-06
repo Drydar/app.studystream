@@ -58,6 +58,7 @@ body {
     background-color: rgba(0, 0, 0, 0.527);
     color: rgba(255, 255, 255, 0.788);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.788);
+    scale: 1.1;
 }
 
 .subs{ 
@@ -81,9 +82,10 @@ body {
 }
 
 .subs p:active {
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: rgba(161, 156, 156, 0.829);
     color: rgba(0, 0, 0, 0.699);
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    scale: 1.1;
 }
 
 .category {

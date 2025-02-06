@@ -124,6 +124,11 @@ header a {
     text-align: center;
 }
 
+.list a:active {
+    scale: 1.2;
+
+}
+
 .list p {
     padding: 2px;
     margin: 2px;
