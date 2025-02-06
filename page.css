@@ -62,7 +62,7 @@ header p {
     font-family: 'Math';
     font-size: 12px;
     font-weight: 600;
-    padding-left: 150px;
+    padding-left: 142px;
     margin-top: -12px;
     color: black;
 }
@@ -172,6 +172,14 @@ main p {
     text-align: center;
 }
 
+.top-item:active {
+    scale: 1.1;
+}
+
+.top-item  p {
+    line-height: 1.1;
+}
+
 .top-item img {
     width: 25px;
     border-radius: 50%;
@@ -225,7 +233,7 @@ main p {
 .openPopup {    
     text-decoration: none;
     color: black;
-    background-color: whitesmoke;
+    background-color: #007bff;
     width: 100px;
     text-align: center;
     font-weight: 600;
@@ -240,7 +248,7 @@ main p {
 }
 .content p:active {
     scale: 1.1;
-    background-color: rgb(209, 207, 207);
+    background-color: #0354aa;
 }
 
 .popupBox {

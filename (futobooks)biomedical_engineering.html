@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>FUTO</title>
     <link rel="stylesheet" href="edu-content.css">
 </head>
@@ -13,12 +13,12 @@
     
     <div class="the-head">
         <header>
-            <h2 class="department">BIOMEDICAL ENGINEERING</h2>
+            <h2 class="department">BOMEDICAL ENGINEERING</h2>
         </header>
 
         <div class="nav-container">
-            <div id="nav1" class="navigation">First Semester</div>
-            <div id="nav2" class="navigation">Second Semester</div>
+            <div id="nav1" class="navigation">First<br>Semester</div>
+            <div id="nav2" class="navigation">Second<br>Semester</div>
         </div>
     </div>
 
@@ -40,8 +40,7 @@
             </div>
         </div>
 
-        <!--Remove to add levels and courses-->
-        <div style="display: none;">
+        <div style="display: none;">        
             <h3 class="levels">200 level</h3>
             <div class="courses">
                 <div class="list">
@@ -78,8 +77,11 @@
                 </div>
             </div>
         </div>
-        
-        <div id="secondsemester" class="content"> 
+    </div>
+    
+    <div id="secondsemester" class="content"> 
+        <p class="na">Not Available</p>
+        <div style="display: none;">
             <h3 class="semester">SECOND SEMESTER</h3>    
             <h3 class="levels">100 level</h3>
             <div class="courses">
@@ -124,6 +126,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="instruction">
+        <img src="up.png">
+        <p>Click to select a semester</p>
     </div>
     <script>
         const nav1=document.getElementById('nav1');

@@ -86,7 +86,7 @@
   }
   body {
     font-family: 'Math';
-    background-color: whitesmoke;
+    background-color: #007bff23;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.842);
     padding: 15px;
     width: 95%;
     border-radius: 7px;
@@ -107,12 +107,12 @@ form {
 }
 
 input {
-    border-radius: 5px;
+    border-radius: 7px;
     padding:7px;
     border: none;
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-size: 14px;
-    margin: 1px;
+    margin: 3px;
     font-weight: 400;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
 }
@@ -128,7 +128,7 @@ button {
   width: 100%;
   font-family: 'Math';
   font-size: 17px;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.459);
+  box-shadow: 0 0 7px rgb(0, 0, 0);
 }
 
 button:active {

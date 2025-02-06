@@ -1,88 +1,82 @@
-header {
-    background-color: rgb(97, 45, 2);
-    color: #fff;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 20px;
-    font-family:cursive;
-    font-size: 14px;
-} 
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
 
-header1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #111;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 20px;
-    font-size: 20px;
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
 }
 
 body {
-    font-family: Arial, Comics Sans;
-    line-height: 1;
-    margin: 0;
+    background-color: whitesmoke;
+    margin: 2px;
     padding: 3px;
-    background-color: #fff;
-    border-radius: 30px;
 }
 
-.head{
-    background-color: rgb(97, 45, 2);
-    color: #fff;
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-family: 'Mordis';
     text-align: center;
-    padding: 1px 0px;
-    border-radius: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 32px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
 }
 
-
-summary{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-style: normal;
+header img {
+    width: 55px;
+    height: 55px;
+    animation: rotate 4s linear infinite;
 }
-details{
-    font-family:monospace;
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ceo {
+    text-align: right;
+    padding: 3px;
+    margin: 3px;
+    margin-top: -25px;
+}
+
+.ceo img {
+    width: 140px;
+    border-radius: 50%;
+}
+
+.write-up {
+    text-align: justify;
+    padding: 5px;
+    margin: 1px;
+    font-family: 'Math';
     font-size: 16px;
-    background-color: rgb(204, 212, 180); 
-    border: #751a1a;
-    border-radius: 35px;
-    padding: 18px 4px;
-    margin: 6px;
+    margin-top: -25px;
 }
 
-.faq{
-    font-family:monospace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-}
-.title{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.sub {
+    text-decoration: 3px solid black underline;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 10;
-    background-color: #fff;
-    border: 2px none #999;
-    border-color: none;
-    text-align: left;
-}
-
-button{
-    background-color: rgb(9, 163, 125);
-    position: center;
-    border-radius: 20px;
-    border-color: #8d8f1c;
+.shift {
+    margin-left: 15px;
+    font-size: 15px;
 }
 
 footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 11px;
-    background-color: #fff; 
-    color: #111;
     text-align: right;
-    padding: 10px;
+    font-size: 70%;
+    padding: 3px;
+    margin: 3px;
+    font-weight: 700;
+    font-family: 'Math';
 }
