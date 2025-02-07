@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
+@font-face {
     font-family: 'Musician';
     src: url('Musician\ -\ Demo.otf');
 }
@@ -6,6 +11,11 @@
 @font-face {
     font-family: 'Celina Diary';
     src: url('Celina\ Diary\ -\ Personal\ Use.otf')
+}
+
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
 }
 
 body {
@@ -126,7 +136,6 @@ header a {
 
 .list a:active {
     scale: 1.2;
-
 }
 
 .list p {
@@ -178,6 +187,28 @@ header a {
     display: block;
 }
 
+.instruction img {
+    width: 20px;
+}
+
+.instruction {
+    text-align: center;
+    color: black;
+    font-family: 'Mordis';
+    padding: 1px;
+    font-size: 22px;
+    margin-top: 45px;
+    line-height: 0.1;
+}
+
 footer {
     display: none;
+}
+
+#secondsemester p {
+    font-family: 'Math';
+    color: black;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 40px;
 }
