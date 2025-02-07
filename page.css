@@ -45,6 +45,31 @@ header {
     gap: 10px;
 }
 
+header .novels {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.novels {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: 'Math';
+    font-weight: 600;
+    font-size: 11px;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    line-height: 0;
+}
+
+.novels img {
+    width: 50px;
+}
+
 .my h1 {
     font-family: "Math";
     font-weight: 800;
@@ -233,7 +258,7 @@ main p {
 .openPopup {    
     text-decoration: none;
     color: black;
-    background-color: #007bff56;
+    background-color: #007bff1f;
     width: 100px;
     text-align: center;
     font-weight: 600;

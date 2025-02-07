@@ -86,7 +86,7 @@
   }
   body {
     font-family: 'Math';
-    background-color: #007bff23;
+    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,22 +99,23 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: rgba(0, 0, 0, 0.315);
     padding: 15px;
     width: 95%;
-    border-radius: 7px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.945);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.945);
 }
 
 input {
-    border-radius: 7px;
+    border-radius: 10px;
     padding:7px;
     border: none;
     font-family: 'Math';
-    font-size: 14px;
+    font-size: 16px;
     margin: 3px;
     font-weight: 400;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
+    background-color: whitesmoke;
 }
 
 button {
@@ -125,10 +126,10 @@ button {
   border: none;
   color: white;
   margin-top: 15px;
-  width: 100%;
+  width: 130px;
   font-family: 'Math';
   font-size: 17px;
-  box-shadow: 0 0 7px rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 button:active {

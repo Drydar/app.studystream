@@ -17,8 +17,8 @@
         </header>
 
         <div class="nav-container">
-            <div id="nav1" class="navigation">First Semester</div>
-            <div id="nav2" class="navigation">Second Semester</div>
+            <div id="nav1" class="navigation">First<br>Semester</div>
+            <div id="nav2" class="navigation">Second<br>Semester</div>
         </div>
     </div>
 
@@ -28,6 +28,7 @@
         <div class="courses">
             <div class="list">
                 <a href="(futobooks)phy101.html" style="background-image: url(10.jpg);">PHY<br>101</a>
+                <a href="(futobooks)mth101.html" style="background-image: url(3.jpg);">MTH<br>101</a>
                 <a href="#" style="background-image: url(1.jpg);">CHM<br>101</a>
                 <a href="#" style="background-image: url(2.jpg);">BIO<br>101</a>
                 <a href="#" style="background-image: url(3.jpg);">ENG<br>101</a>
@@ -39,8 +40,7 @@
             </div>
         </div>
 
-        <!--Remove to add levels and courses-->
-        <div style="display: none;">
+        <div style="display: none;">        
             <h3 class="levels">200 level</h3>
             <div class="courses">
                 <div class="list">
@@ -77,8 +77,11 @@
                 </div>
             </div>
         </div>
-        
-        <div id="secondsemester" class="content"> 
+    </div>
+    
+    <div id="secondsemester" class="content"> 
+        <p class="na">Not Available</p>
+        <div style="display: none;">
             <h3 class="semester">SECOND SEMESTER</h3>    
             <h3 class="levels">100 level</h3>
             <div class="courses">
@@ -123,6 +126,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="instruction">
+        <img src="up.png">
+        <p>Click to select a semester</p>
     </div>
     <script>
         const nav1=document.getElementById('nav1');

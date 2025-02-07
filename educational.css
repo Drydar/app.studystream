@@ -14,7 +14,7 @@ body {
     font-family: 'Roboto';
     font-size: 15px;
     color: white;
-    background-color: #007bff;
+    background-image: linear-gradient(to left, rgb(167, 163, 163), rgb(236, 179, 71));
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.842);
     margin: 0px;

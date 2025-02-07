@@ -3,14 +3,19 @@
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
 body {
-    background-color: rgba(0, 0, 0, 0.87);
-    color: white;
+    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
+    color: black;
     padding: 1px;
 }
 
 header {
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-size: 100%;
     margin:1px;
     font-weight: 800;
@@ -18,7 +23,7 @@ header {
 }
 
 .genre {
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-size: 100%;
     padding: 2px;
     margin: 1px;
@@ -42,24 +47,25 @@ header {
     color: white;
     cursor:pointer;
     transition: background-color 0.2s ease;
-    font-family: 'Roboto';
+    font-family: 'Math';
     margin: 2px;
-    background-color: rgba(7, 116, 179, 0.548);
-    border-radius: 10px;
+    background-color: rgba(11, 147, 226, 0.76);
+    border-radius: 15px;
     border: none;
     flex-basis: 100%;
     justify-content: space-between;
-    box-shadow: 0 0 5px rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
-.navigation:hover {
+.navigation:active {
     background-color: rgb(97, 92, 102);
     border-radius: 15px;
     border: none;
+    scale: 1.1;
 }
 
 .novels {
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-weight: bold;
     padding: 5px;
     margin: 3px;
@@ -69,8 +75,10 @@ header {
     display: none;
     margin-top: 20px;
     padding: 2px;
-    background-color: transparent;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(245, 245, 245);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 img {
@@ -91,10 +99,10 @@ img {
 }
 
 .list img {
-    width: 85px;
-    border-radius: 4px;
+    width: 100px;
+    border-radius: 7px;
     border: none;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.973);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.973);
 }
 
 footer {
@@ -104,6 +112,6 @@ footer {
     text-align: right;
     font-family: 'Roboto';
     font-size: 80%;
-    color: white;
+    color: black;
     font-weight: bold;
 }

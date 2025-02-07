@@ -3,53 +3,104 @@
     src: url('Roboto-VariableFont_wdth\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
 body {
-    background-color: rgb(214, 210, 210);
+    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
     padding: 0;
     margin: 0;
     font-family: 'Roboto';
 }
 
+.info {
+    padding: 3px;
+    margin: 10px;
+    text-align: center;
+    margin-top: -10px;
+    border: 1px solid rgba(0, 0, 0, 0.582);
+    border-radius: 15px 0 15px 0;
+    background-color: rgba(0, 0, 0, 0.26);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: whitesmoke;
+}
+
+header {
+    padding: 3px;
+    margin: 3px;
+    font-family: 'Mordis';
+    font-size: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+}
+
 .container {
-    margin: 15px 4px 0 4px;
+    margin: 55px 4px 0 4px;
 }
 
 form {
-    padding: 2px;
-    margin: 2px;
+    padding: 5px;
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: rgba(56, 58, 59, 0.733);
+    background-color: rgba(255, 255, 255, 0.466);
     box-shadow: 0 0 10px rgb(0, 0, 0);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 input {
-    border-radius: 3px;
+    border-radius: 10px;
     padding: 5px;
     margin: 3px;
     border: none;
     font-size: 17px;
     margin-bottom: 10px;
-    box-shadow: 0 0 8px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    font-family: 'Math';
+}
+
+input::placeholder {
+    color: rgb(235, 212, 212);
 }
 
 textarea {
-    border-radius: 5px;
-    padding: 3px;
+    border-radius: 10px;
+    padding: 5px;
     margin: 3px;
     font-size: 17px;
     box-shadow: 0 0 8px rgb(0, 0, 0);
+    height: 100px;
+}
+
+textarea::placeholder {
+    font-family: 'Math';
 }
 
 .submit {
     margin-top: 15px;
     font-weight: 600;
-    background-color: rgba(148, 147, 147, 0.877);
-    width: 110px;
+    background-color: #007bff;
+    width: 150px;
     border-radius: 6px;
-    box-shadow: 0 0 7px rgb(255, 255, 255);
+    font-family: 'Math';
+    box-shadow: 0 0 7px rgb(0, 0, 0);
 }
 
 .submit:active {
@@ -57,7 +108,7 @@ textarea {
     color: white;
 }
 
-footer {
+footer p{
     font-size: 80%;
     font-weight: 600;
     position: absolute;

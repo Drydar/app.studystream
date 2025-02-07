@@ -138,6 +138,12 @@ footer {
     font-style: oblique;
 }
 
+.ask-question:active {
+    scale: 1.1;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border-radius: 50px 0 0 50px;
+}
+
 .ask-question img {
     width: 30px;
     height: 30px;
