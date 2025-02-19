@@ -29,7 +29,7 @@ body {
 }
 
 .header {
-    font-family: 'Roboto';
+    font-family: 'Math';
     font-size: 24px;
     font-weight: 700;
     padding: 1px;
@@ -41,7 +41,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #007bff;
+    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
     box-shadow: 0 0 20px rgb(3, 3, 3);
     gap: 1;
     color: black;
@@ -86,7 +86,7 @@ body {
     text-align: justify;
     font-size: 15px;
     margin-top: 105px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 2;
     box-shadow: 0 0 10px rgba(3, 3, 3, 0.829);
 }
@@ -99,7 +99,7 @@ body {
     text-align: justify;
     font-size: 15px;
     margin-top: 20px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 2;
     box-shadow: 0 0 10px rgba(3, 3, 3, 0.829);
 }
@@ -111,6 +111,7 @@ body {
 
 .shift {
     margin-left: 10px;
+    font-family: 'Math';
 }
 
 footer {

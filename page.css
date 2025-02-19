@@ -143,6 +143,38 @@ main p {
     margin-bottom: 2px;
 }
 
+.top-action {
+    font-family: 'Math';
+    padding: 1%;
+    margin: 1px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.action {
+    text-decoration: none;
+    color: black;
+    background-color: #007bff1f;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 50px 25px 50px 25px;
+    margin: 3px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    font-family: 'Math';
+    font-size: 24px;
+}
+
+.action:active {
+    background-color: #0455ac7e;
+    scale: 0.9;
+    border-radius: 10px;
+}
+
 .content {
     font-family: 'Math';
     padding: 1%;
@@ -272,8 +304,9 @@ main p {
     font-size: 24px;
 }
 .content p:active {
-    scale: 1.1;
-    background-color: #0354aa;
+    background-color: #0455ac7e;
+    scale: 0.9;
+    border-radius: 10px;
 }
 
 .popupBox {
