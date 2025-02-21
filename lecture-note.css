@@ -115,6 +115,7 @@ body {
 }
 
 footer {
+    display: none;
     font-family: "Roboto";
     font-size: 11px;
     text-align: left;
