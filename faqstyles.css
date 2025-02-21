@@ -59,6 +59,25 @@ header img {
     box-shadow: 0 0 13px rgb(0, 0, 0);
 }
 
+.ceo_image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoomed {
+    position: relative;
+    top: 200px;
+    left: -30%;
+    border-radius: 2px;
+    transform: translate(-50%, -50%) scale(6);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ceo_image:active {
+    transform: scale(2);
+    border-radius: 2px;
+}
+
 .write-up {
     text-align: justify;
     padding: 5px;

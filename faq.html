@@ -12,7 +12,7 @@
         <h2>StreamPlex</h2>
     </header>
     <div class="ceo">
-        <img src="ceo.jpg">
+        <img src="ceo.jpg" class="ceo_image" id="ceo_image">
     </div>
 
     <div class="write-up">
@@ -38,6 +38,18 @@
             very large number of students.</p>
     </div>
 </body>
+<script>
+    const ceo_image = document.getElementById('ceo_image');
+    ceo_image.addEventListener('click', function() {
+        if 
+        (ceo_image.classList.contains('zoomed')) {
+            ceo_image.classList.remove('zoomed');
+        } 
+        else {
+            ceo_image.classList.add('zoomed');
+        }
+    });
+</script>
 <footer>
         <p>&copy; RYDAR_TECH GROUP.</p>
     </footer>
