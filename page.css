@@ -155,8 +155,8 @@ main p {
 
 .action {
     text-decoration: none;
-    color: black;
-    background-color: #007bff1f;
+    color: white;
+    background-color: #007bff;
     width: 100%;
     text-align: center;
     font-weight: 600;
@@ -289,8 +289,8 @@ main p {
 
 .openPopup {    
     text-decoration: none;
-    color: black;
-    background-color: #007bff1f;
+    color: white;
+    background-color: #007bff;
     width: 100px;
     text-align: center;
     font-weight: 600;
