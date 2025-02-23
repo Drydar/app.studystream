@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+}
+
+#username {
+    font-family: 'Math';
+    font-size: 25px;
+}
+
+body h1 {
+    font-family: 'Math';
+    font-size: 25px;
+}
+
+.head {
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
