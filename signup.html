@@ -3,84 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Signup</title>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"></script>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
     <div class="container">
-        <form id="signup-form">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" placeholder="WhatsApp Number" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-            <p>Already have an account? <a href="login.html" class="switch">Login here</a></p>
-        </form>
-        <p id="signup-message"></p>
+        <h2>Create an Account</h2>
+        <div id="message"></div>
+        
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="signUp()">Sign Up</button>
+        <div class="bottom">
+            <p>Already have an account? <a class="switch" href="login.html">Login</a></p>
+        </div>
     </div>
-
-    <script type="module">
-        // Import Firebase modules
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyC5qQdiJpCHW6FtZnpa2RYdL-b66VqYQfk",
-            authDomain: "streamplex-935ff.firebaseapp.com",
-            projectId: "streamplex-935ff",
-            storageBucket: "streamplex-935ff.firebasestorage.app",
-            messagingSenderId: "32314467540",
-            appId: "1:32314467540:web:8a6ada369a64c4ecd80741"
-        };
-
+    <footer class="footer">
+        <p>Rydar-Tech Group</p>
+    </footer>
+    <script type="module" src="firebase.js"></script>
+    <script>
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
-        const database = getDatabase();
-    </script>
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.database();
 
-      <script type="module">
-        import { auth, database, createUserWithEmailAndPassword, ref, set } from "./firebase-config.js";
-      
-        document.getElementById("signup-form").addEventListener("submit", function (e) {
-          e.preventDefault();
-      
-          const username = document.getElementById("username").value;
-          const email = document.getElementById("email").value;
-          const phone = document.getElementById("phone").value;
-          const password = document.getElementById("password").value;
-      
-          createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-              const user = userCredential.user;
-      
-              // Save user data in Firebase Database
-              set(ref(database, "users/" + user.uid), {
-                username: username,
-                email: email,
-                phone: phone,
-                points: 0 // Default points
-              });
-      
-              document.getElementById("signup-message").innerText = "Signup successful!";
-              window.location.href = "dashboard.html"; // Redirect to dashboard
-            })
-            .catch((error) => {
-              document.getElementById("signup-message").innerText = error.message;
-            });
-        });
-      </script>
-    </div>
-</div>
-<footer>
-    <p class="footer">Rydar-Tech Group</p>
-</footer>
+        function signUp() {
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const messageDiv = document.getElementById("message");
+
+            if (!username || !email || !password) {
+                messageDiv.innerHTML = "<p style='color: white; background-color: gray; border-radius: 10px; padding: 7px'>All fields are required.</p>";
+                return;
+            }
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    const userId = user.uid;
+
+                    // Save user data to Firebase Database
+                    database.ref("users/" + userId).set({
+                        username: username,
+                        email: email,
+                        points: 0
+                    });
+
+                    messageDiv.innerHTML = "<p style='color: green;'>Signup successful! Redirecting...</p>";
+
+                    // Redirect to dashboard after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = "dashboard.html";
+                    }, 1500);
+                })
+                .catch((error) => {
+                    messageDiv.innerHTML = `<p style='color: red;'>Error: ${error.message}</p>`;
+                });
+        }
+    </script>
 
 </body>
 </html>

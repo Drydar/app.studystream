@@ -3,62 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Optional CSS -->
 </head>
 <body>
-    <div class="head">
-        <h1>Hello, <span id="username"></span>!</h1>
-    <p>Your Points: <span id="points"></span></p>
-    <button id="logout">Logout</button>
-    </div>
-    <script type="module">
-        // Import Firebase modules
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyC5qQdiJpCHW6FtZnpa2RYdL-b66VqYQfk",
-            authDomain: "streamplex-935ff.firebaseapp.com",
-            projectId: "streamplex-935ff",
-            storageBucket: "streamplex-935ff.firebasestorage.app",
-            messagingSenderId: "32314467540",
-            appId: "1:32314467540:web:8a6ada369a64c4ecd80741"
-        };
+    <h1 id="welcomeMessage">Loading...</h1>
+    <p id="pointsDisplay">Points: 0</p>
+    <button onclick="logout()">Logout</button>
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
-        const database = getDatabase();
-    </script>
-<script type="module">
-  import { auth, database, ref, get, signOut } from "./firebase.js";
+    <script type="module" src="firebase.js"></script>
+    <script src="dashboard.js"></script>
 
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      get(ref(database, "users/" + user.uid)).then((snapshot) => {
-        if (snapshot.exists()) {
-          const userData = snapshot.val();
-          document.getElementById("username").innerText = userData.username;
-          document.getElementById("points").innerText = userData.points;
-        }
-      });
-    } else {
-      window.location.href = "login.html"; // Redirect if not logged in
-    }
-  });
-
-  document.getElementById("logout").addEventListener("click", function () {
-    signOut(auth).then(() => {
-      window.location.href = "login.html";
-    });
-  });
-</script>
 </body>
 </html>

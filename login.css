@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url(6.jpg);
+    background-image: url(8.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -24,11 +24,11 @@ body {
 
 .container {
     background: #ffffffa2;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 40px 0 90px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.925);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
 }
 
@@ -41,10 +41,10 @@ h2 {
 /* Input Fields */
 input {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
+    padding: 9px;
+    margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 9px;
     font-size: 16px;
     transition: border-color 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.993);
@@ -85,13 +85,6 @@ button:active {
     background: #c82333;
 }
 
-/* Message Display */
-p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: red;
-}
-
 /* Dashboard Styles */
 .dashboard {
     text-align: center;
@@ -121,10 +114,14 @@ p {
     }
 }
 
+.bottom {
+    margin-top: 20px;
+}
+
 .switch {
     text-decoration: none;
     color: blue;
-    font-size: 15px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
