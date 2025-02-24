@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -14,53 +12,50 @@
     <div class="container">
         <h2>Create an Account</h2>
         <div id="message"></div>
-        
-        <input type="text" id="username" placeholder="Username">
         <input type="email" id="email" placeholder="Email">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="signUp()">Sign Up</button>
+        <input type="text" id="username" placeholder="Username">
+        <button onclick="signUpUser(document.getElementById('email').value, document.getElementById('password').value, document.getElementById('username').value)">Sign Up</button>
+        
         <div class="bottom">
             <p>Already have an account? <a class="switch" href="login.html">Login</a></p>
         </div>
     </div>
+
     <footer class="footer">
         <p>Rydar-Tech Group</p>
     </footer>
-    <script type="module" src="firebase.js"></script>
+
+    <script type="module" src="supabase.js"></script>
     <script>
-    function signUp() {
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const messageDiv = document.getElementById("message");
-
-    if (!username || !email || !password) {
-        messageDiv.innerHTML = "<p style='color: white; background-color: gray; border-radius: 10px; padding: 7px'>All fields are required.</p>";
-        return;
-    }
-
-    auth.createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            const userId = user.uid;
-
-            // Save user data in Realtime Database
-            database.ref("users/" + userId).set({
-                username: username,
-                email: email,
-                points: 0  // Ensure points are initialized
-            }).then(() => {
-                messageDiv.innerHTML = "<p style='color: green; background-color: whitesmoke;'>Signup successful! Redirecting...</p>";
-                setTimeout(() => {
-                    window.location.href = "dashboard.html";
-                }, 1500);
+        async function createUserProfile(email, username) {
+            const { data, error } = await supabase
+                .from("profiles")
+                .insert([{ email, username, points: 0 }]);
+        
+            if (error) {
+                console.error("Error creating profile:", error.message);
+            } else {
+                console.log("Profile created:", data);
+            }
+        }
+        </script>
+        
+        <script>
+        async function signUpUser(email, password, username) {
+            const { user, error } = await supabase.auth.signUp({
+                email,
+                password
             });
-        })
-        .catch((error) => {
-            messageDiv.innerHTML = `<p style='color: red;  background-color: gray;'>Error: ${error.message}</p>`;
-        });
-}
-    </script>
+        
+            if (error) {
+                console.error("Signup Error:", error.message);
+            } else {
+                console.log("User signed up:", user);
+                await createUserProfile(email, username);
+            }
+        }
+        </script>
 
 </body>
 </html>

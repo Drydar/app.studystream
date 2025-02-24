@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -15,43 +14,31 @@
 
         <input type="email" id="email" placeholder="Email">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
+        <button onclick="signInUser(document.getElementById('email').value, document.getElementById('password').value)">Login</button>
         <div class="bottom">
             <p>Don't have an account? <a class="switch" href="signup.html">Sign Up</a></p>
         </div>
     </div>
+
     <footer class="footer">
         <p>Rydar-Tech Group</p>
     </footer>
-    <script type="module" src="firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
+    <script type="module" src="supabase.js"></script>
+<script>
+    async function signInUser(email, password) {
+    const { user, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+    });
 
-        function login() {
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const messageDiv = document.getElementById("message");
-
-            if (!email || !password) {
-                messageDiv.innerHTML = "<p style='color: white; background-color: gray; border-radius: 10px; padding: 7px'>Both fields are required.</p>";
-                return;
-            }
-
-            auth.signInWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    messageDiv.innerHTML = "<p style='color: green;'>Login successful! Redirecting...</p>";
-
-                    // Redirect to dashboard after 2 seconds
-                    setTimeout(() => {
-                        window.location.href = "dashboard.html";
-                    }, 1500);
-                })
-                .catch((error) => {
-                    messageDiv.innerHTML = `<p style='color: red;'>Error: ${error.message}</p>`;
-                });
-        }
+    if (error) {
+        console.error("Login Error:", error.message);
+    } else {
+        console.log("User signed in:", user);
+        alert("Login successful!");
+        window.location.href = "dashboard.html"; // Redirect after login
+    }
+}
     </script>
 
 </body>
