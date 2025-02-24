@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+.top {
+    display: flex;
+    margin: 1px;
+    padding: 5px;
+    align-items: center;
+    gap: 7px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items:first baseline;
+    font-family: 'Math';
+    font-size: 14px;
+
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+}
+
+button {
+    padding: 15px;
+    margin: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 13px;
+    transition: 0.2 ease-in-out;
+    font-weight: 600;
+    font-family: 'Math';
+    color: white;
+    font-size: 18px;
+}
+
+button:disabled {
+    color: gray;
+    background-color: rgb(43, 42, 42);
+}
+
+button:active {
+    scale: 0.9;
+    background-color:rgb(73, 82, 212);
+    color: whitesmoke;
+}

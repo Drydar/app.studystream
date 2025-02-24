@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New word Scramble Game</title>
+    <link rel="stylesheet" href="wordscramble.css">
+</head>
+<body>
+    <h2>Word Scramble Game</h2>
+    <div class="container" id="userContainer">
+        <h3>Enter Your WhatsApp number</h3>
+        <input type="text" id="username" placeholder="WhatsApp number">
+        <button onclick="saveUsername()">Next</button>
+    </div>
+
+    <div class="container hidden" id="pinContainer">
+        <h3>Enter Activation Pin</h3>
+        <input type="text" id="activationPin" placeholder="Enter pin">
+        <button onclick="checkPin()">Submit</button>
+        <p id="pinMessage" class="warning"></p>
+    </div>
+
+    <div class="container hidden" id="gameContainer">
+        <p>Unscramble the word:</p>
+        <h3 id="scrambledWord"></h3>
+        <p><strong>Hint:</strong> <span id="wordHint"></span></p>
+        <p id="timer">Time left: <span id="timeLeft">30</span>s</p>
+        <p id="cheatingTimer" class="hidden">Penalty Time: <span id="cheatTimeLeft">10</span>s</p>
+        <input type="text" id="userGuess" placeholder="Your guess">
+        <button onclick="checkAnswer()" id="submitButton">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <div class="container hidden" id="correctAnswerScreen">
+        <h2>✅ Correct! Sending answer...</h2>
+        <button onclick="restartGame()">New Game</button>
+    </div>
+
+    <div class="container hidden" id="gameOverScreen">
+        <h2>⏳ Time’s up! Game Over.</h2>
+        <button onclick="restartGame()">New Game</button>
+    </div>
+    <footer>
+        <p>Rydar-Tech Group</p>
+    </footer>
+
+    <script>
+        const words = [
+            { word: "javascript", hint: "A programming language for web development.", pin: "A1B2" },
+            { word: "developer", hint: "A person who writes and creates software.", pin: "C3D4" },
+            { word: "streamplex", hint: "A gaming community name.", pin: "E5F6" },
+            { word: "coding", hint: "The process of writing software instructions.", pin: "G7H8" },
+            { word: "firebase", hint: "A Google platform for databases & authentication.", pin: "I9J0" },
+            { word: "supabase", hint: "An open-source Firebase alternative.", pin: "K1L2" }
+        ];
+
+        const formspreeEndpoint = "https://formspree.io/f/mnnnyzvg";
+
+        let currentWord = "";
+        let currentHint = "";
+        let currentPin = "";
+        let username = "";
+        let gameTime = 30;
+        let penaltyTime = 10;
+        let timeLeft = gameTime;
+        let cheatTimeLeft = penaltyTime;
+        let gameTimer, cheatTimer;
+        let isGameActive = false;
+        let isCheating = false;
+
+        function saveUsername() {
+            username = document.getElementById("username").value.trim();
+            if (username === "") {
+                alert("Please enter your username.");
+                return;
+            }
+            document.getElementById("userContainer").classList.add("hidden");
+            document.getElementById("pinContainer").classList.remove("hidden");
+        }
+
+        function checkPin() {
+            const enteredPin = document.getElementById("activationPin").value;
+            let wordObj = words.find(word => word.pin === enteredPin);
+
+            if (wordObj) {
+                currentWord = wordObj.word;
+                currentHint = wordObj.hint;
+                currentPin = wordObj.pin;
+
+                document.getElementById("scrambledWord").innerText = shuffleWord(currentWord);
+                document.getElementById("wordHint").innerText = currentHint;
+                document.getElementById("pinContainer").classList.add("hidden");
+                document.getElementById("gameContainer").classList.remove("hidden");
+
+                resetGameFields();
+                startGame();
+            } else {
+                document.getElementById("pinMessage").innerText = "❌ Incorrect pin! Try again.";
+            }
+        }
+
+        function shuffleWord(word) {
+            return word.split("").sort(() => Math.random() - 0.5).join("");
+        }
+
+        function startGame() {
+            isGameActive = true;
+            timeLeft = gameTime;
+            updateTimerDisplay();
+            resetTimer();
+        }
+
+        function checkAnswer() {
+            if (!isGameActive || isCheating) return;
+            let guess = document.getElementById("userGuess").value.toLowerCase();
+            if (guess === currentWord) {
+                document.getElementById("message").innerText = "✅ Correct! Sending answer...";
+                sendAnswer(username, guess);
+                clearInterval(gameTimer);
+                document.getElementById("gameContainer").classList.add("hidden");
+                document.getElementById("correctAnswerScreen").classList.remove("hidden");
+            } else {
+                document.getElementById("message").innerText = "❌ Incorrect. Try again!";
+            }
+        }
+
+        function sendAnswer(user, answer) {
+            fetch(formspreeEndpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username: user, answer: answer })
+            });
+        }
+
+        function resetTimer() {
+            clearInterval(gameTimer);
+            gameTimer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+
+                if (timeLeft <= 0) {
+                    clearInterval(gameTimer);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            document.getElementById("timeLeft").innerText = timeLeft;
+        }
+
+        function endGame() {
+            document.getElementById("gameContainer").classList.add("hidden");
+            document.getElementById("gameOverScreen").classList.remove("hidden");
+            isGameActive = false;
+        }
+
+        function restartGame() {
+            document.getElementById("correctAnswerScreen").classList.add("hidden");
+            document.getElementById("gameOverScreen").classList.add("hidden");
+            document.getElementById("userContainer").classList.remove("hidden");
+            document.getElementById("username").value = "";
+            document.getElementById("activationPin").value = "";
+            resetGameFields();
+        }
+
+        function resetGameFields() {
+            document.getElementById("userGuess").value = "";
+            document.getElementById("message").innerText = "";
+        }
+    </script>
+
+</body>
+</html>

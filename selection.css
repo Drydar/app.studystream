@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-VariableFont_wdth\,wght.ttf');
+  }
+
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -10px;
+}
+
+.top img {
+    width: 70px;
+    margin-bottom: -10px;
+}
+
+.top p {
+    font-family: "math";
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.container {
+    border-radius: 10px;
+    height: auto;
+    width: 90%;
+    max-width: 400vh;
+    justify-self: center;
+    margin: 20px;
+    margin-top: 70px;
+    height: 80vh;
+    padding: 20px;
+    text-align: center;
+    justify-items: center;
+}
+
+.btn {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button {
+    width: 400px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(19, 134, 228);
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: 0.1s ease-in-out;
+}
+
+button:active {
+    scale: 0.9;
+    margin: 20px;
+    background-color: rgb(21, 122, 7);
+    color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Math';
+    font-size: 14px;
+    font-weight: 600;
+}
+footer img {
+    width: 30px;
+}
