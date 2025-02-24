@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Block Puzzle</title>
+    <link rel="stylesheet" href="picture_puzzle.css">
+</head>
+<body>
+    <div style="margin-top: 40px;"></div>
+    <h2>Picture Block Puzzle</h2>
+
+    <div id="login-container">
+        <input type="text" id="phone-number" placeholder="Enter your phone number">
+        <input type="text" id="activation-code" placeholder="Enter activation code">
+        <button onclick="validateUser()">Start Game</button>
+        <p id="login-message"></p>
+    </div>
+
+    <div id="reference-container" style="display: none;">
+        <img id="reference-image" src="picture_puzzle.png" alt="Reference Image">
+    </div>
+
+    <div id="puzzle-container" style="display: none;"></div>
+    <p id="message"></p>
+
+    <script src="picture_puzzle.js"></script>
+</body>
+</html>
