@@ -23,11 +23,9 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
+    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
 }
 
 .top {
@@ -38,13 +36,13 @@ body {
 }
 
 .top img {
-    width: 70px;
+    width: 55px;
     margin-bottom: -10px;
 }
 
 .top p {
     font-family: "math";
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
 }
 
@@ -66,16 +64,16 @@ body {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
 }
 
 button {
-    width: 400px;
-    padding: 20px;
+    width: 150%;
+    padding: 16px;
     margin: 15px;
     border-radius: 12px;
     border: none;
-    background-color: rgb(19, 134, 228);
+    background-color: rgb(52, 156, 241);
     font-family: 'Roboto';
     font-size: 20px;
     font-weight: 500;
