@@ -21,7 +21,7 @@ body {
 
 .intro {
     position: fixed;
-    top: 20px;
+    top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,24 +46,25 @@ body {
     margin: 0px;
     padding: 0px;
     gap: 30px;
-    margin-top: 90px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 #main {
-    height: 25vh;
+    height: 30vh;
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 25px;
+    justify-content: space-evenly;
     opacity: 1;
 }
 
 .each {
-    width: 150%;
+    width: 145%;
 }
 
 .games {
@@ -113,8 +114,8 @@ body {
 }
 
 .education img {
-    width: 100px;
-    height: 90px;
+    width: 140px;
+    height: 130px;
 }
 
 footer {
@@ -124,4 +125,6 @@ footer {
     right: 0;
     font-family: 'NunitoSans';
     color: white;
+    padding: 5px;
+    margin: 5px;
 }
