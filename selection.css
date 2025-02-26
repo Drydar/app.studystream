@@ -21,14 +21,14 @@ body {
     text-align: center;
     color: rgb(196, 190, 190);
     margin-top: 10px;
-    font-size: 38px;
+    font-size: 49px;
     text-shadow: 0 0 2px rgb(255, 255, 255);
     font-family: 'NunitoSans';
     font-weight: 600;
 }
 
 .intro img {
-    width: 70px;
+    width: 80px;
 }
 
 .content {
@@ -42,10 +42,10 @@ body {
 
 #main {
     height: 30vh;
-    width: 60vh;
+    width: 50vh;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     opacity: 1;
 }
 
@@ -96,8 +96,8 @@ body {
 }
 
 .education img {
-    width: 190px;
-    height: 170px;
+    width: 130px;
+    height: 120px;
 }
 
 footer {
