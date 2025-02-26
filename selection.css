@@ -74,7 +74,7 @@ body {
     font-family: 'NunitoSans';
     color: white;
     background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
-    box-shadow: 0 0 10px rgb(12, 12, 12);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);
     border: none;
     border-radius: 16px;
     transition: 0.1s ease-in;
@@ -86,6 +86,7 @@ body {
     background-image: linear-gradient(to right, rgb(2, 48, 78), rgb(7, 40, 90), rgb(63, 63, 216));
     display: flex;
     flex-direction: row-reverse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
 }
 
 .games img {
@@ -98,7 +99,7 @@ body {
     font-family: 'NunitoSans';
     color: white;
     background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(37, 36, 36), rgb(65, 63, 63));
-    box-shadow: 0 0 10px rgb(12, 12, 12);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);
     border: none;
     border-radius: 16px;
     transition: 0.1s ease-in-out;
@@ -110,6 +111,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(65, 62, 62), rgb(121, 117, 117));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
 }
 
 .education img {
