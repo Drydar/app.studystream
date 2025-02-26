@@ -1,108 +1,110 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-VariableFont_wdth\,wght.ttf');
-  }
-
-@font-face {
-    font-family: 'Math';
-    src: url('NotoSansMath-Regular.ttf');
-  }
-  
-  @font-face {
-    font-family: 'Mordis';
-    src: url('Mordis.ttf');
-  }
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    align-items: center;
+    font-family: 'NunitoSans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
 }
+
 
 body {
-    padding: 0;
-    margin: 0;
+    display: grid;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121));
-}
-
-.top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: -10px;
-}
-
-.top img {
-    width: 55px;
-    margin-bottom: -10px;
-}
-
-.top p {
-    font-family: "math";
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.container {
-    border-radius: 10px;
-    height: auto;
-    width: 90%;
-    max-width: 400vh;
-    justify-self: center;
-    margin: 20px;
-    margin-top: 70px;
-    height: 80vh;
-    padding: 20px;
     text-align: center;
-    justify-items: center;
+    background-image: linear-gradient(to left, black,rgb(58, 56, 56), rgb(55, 55, 63))
 }
 
-.btn {
-    margin-top: 50px;
+.intro {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(196, 190, 190);
+    margin-top: 10px;
+    font-size: 38px;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    font-family: 'NunitoSans';
+    font-weight: 600;
 }
 
-button {
-    width: 150%;
-    padding: 16px;
-    margin: 15px;
-    border-radius: 12px;
+.intro img {
+    width: 70px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    gap: 30px;
+}
+
+#main {
+    height: 30vh;
+    width: 60vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.games {
+    display: flex;
+    align-items: center;
+    font-family: 'NunitoSans';
+    color: white;
+    background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
+    box-shadow: 0 0 10px rgb(12, 12, 12);
     border: none;
-    background-color: rgb(52, 156, 241);
-    font-family: 'Roboto';
-    font-size: 20px;
-    font-weight: 500;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    transition: 0.1s ease-in-out;
+    border-radius: 13px;
+    transition: 0.1s ease-in;
+    gap: 20px;
 }
 
-button:active {
+.games:active {
     scale: 0.9;
-    margin: 20px;
-    background-color: rgb(21, 122, 7);
-    color: whitesmoke;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(2, 48, 78), rgb(7, 40, 90), rgb(63, 63, 216));
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.games img {
+    width: 140px;
+}
+
+.education {
+    display: flex;
+    align-items: center;
+    font-family: 'NunitoSans';
+    color: white;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(65, 62, 62), rgb(121, 117, 117));
+    box-shadow: 0 0 10px rgb(12, 12, 12);
+    border: none;
+    border-radius: 13px;
+    transition: 0.1s ease-in-out;
+    gap: 20px;
+}
+
+.education:active {
+    scale: 0.9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(37, 36, 36), rgb(65, 63, 63));
+}
+
+.education img {
+    width: 190px;
+    height: 170px;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    margin-top: 10px;
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 10px;
-    margin: 10px;
-    font-family: 'Math';
-    font-size: 14px;
-    font-weight: 600;
-}
-footer img {
-    width: 30px;
+    font-family: 'NunitoSans';
+    color: white;
 }
