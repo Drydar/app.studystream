@@ -65,7 +65,7 @@ body {
 }
 
 .each {
-    width: 85%;
+    width: 89%;
 }
 
 .games {
@@ -90,7 +90,7 @@ body {
 }
 
 .games img {
-    width: 32%;
+    width: 45%;
 }
 
 .education {
@@ -115,8 +115,7 @@ body {
 }
 
 .education img {
-    width: 35%;
-    height: 70%;
+    width: 55%;
 }
 
 footer {
