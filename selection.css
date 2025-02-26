@@ -3,6 +3,11 @@
     src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Mordis';
+    src: url('Mordis.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -87,6 +92,8 @@ body {
     display: flex;
     flex-direction: row-reverse;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
+    font-family: 'Mordis';
+    font-weight: 100;
 }
 
 .games img {
@@ -112,10 +119,13 @@ body {
     flex-direction: row-reverse;
     background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(65, 62, 62), rgb(121, 117, 117));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
+    font-family: 'Mordis';
+    font-weight: 100;
 }
 
 .education img {
     width: 55%;
+    height: 140%;
 }
 
 footer {
