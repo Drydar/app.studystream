@@ -3,19 +3,25 @@
     src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    display: grid;
-    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    height: 100vh;
     background-image: linear-gradient(to left, black,rgb(58, 56, 56), rgb(55, 55, 63));
     margin: 0;
     padding: 0;
 }
 
 .intro {
+    position: fixed;
+    top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,18 +46,24 @@ body {
     margin: 0px;
     padding: 0px;
     gap: 30px;
-    margin-top: -30px;
+    margin-top: 90px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #main {
     height: 25vh;
-    width: 55vh;
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     opacity: 1;
+}
+
+.each {
+    width: 150%;
 }
 
 .games {
