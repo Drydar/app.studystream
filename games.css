@@ -40,10 +40,10 @@ img {
 .btn {
     display: flex;
     flex-wrap: wrap;
-    gap:5px;
-    justify-content: space-between;
+    gap:6vh;
+    justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
     padding: 1px;
     margin-top: -10px;
 }
@@ -65,11 +65,11 @@ button {
 }
 
 #n1 {
-    border-radius: 33px 0 0px 33px;
+    border-radius: 33px 6px 6px 33px;
 }
 
 #n2 {
-    border-radius: 0px 33px 33px 0;
+    border-radius: 6px 33px 33px 6px;
 }
 
 button:disabled {
