@@ -40,10 +40,10 @@ img {
 .btn {
     display: flex;
     flex-wrap: wrap;
-    gap:3vh;
+    gap:1vh;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 1px;
     padding: 1px;
     margin-top: -10px;
 }
