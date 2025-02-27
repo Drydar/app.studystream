@@ -58,7 +58,7 @@ body {
 }
 
 #main {
-    height: 28vh;
+    height: 24vh;
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -70,7 +70,7 @@ body {
 }
 
 .each {
-    width: 89%;
+    width: 110%;
 }
 
 .games {
@@ -106,7 +106,7 @@ body {
     align-items: center;
     font-family: 'NunitoSans';
     color: white;
-    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(37, 36, 36), rgb(65, 63, 63));
+    background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);
     border: none;
     border-radius: 16px;
