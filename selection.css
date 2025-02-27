@@ -32,10 +32,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
     color: rgb(196, 190, 190);
     margin-top: 10px;
     font-size: 49px;
-    text-shadow: 0 0 2px rgb(255, 255, 255);
     font-family: 'NunitoSans';
     font-weight: 600;
 }
@@ -50,49 +50,53 @@ body {
     flex-direction: column;
     margin: 0px;
     padding: 0px;
-    gap: 40px;
-    margin-top: 100px;
+    gap: 50px;
+    margin-top: 120px;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 #main {
-    height: 24vh;
+    height: 28vh;
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
-    font-size: 260%;
+    font-size: 49px;
     font-weight: 700;
     justify-content: space-evenly;
     opacity: 1;
+    padding: 10px 50px 10px 50px;
 }
 
 .each {
-    width: 110%;
+    width: 100%;
 }
 
 .games {
     display: flex;
     align-items: center;
     font-family: 'NunitoSans';
-    color: white;
-    background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: none;
+    /*background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);*/
     border: none;
     border-radius: 16px;
     transition: 0.1s ease-in;
 }
 
-.games:active {
+.games:hover {
     scale: 0.9;
     border-radius: 10px;
-    background-image: linear-gradient(to right, rgb(2, 48, 78), rgb(7, 40, 90), rgb(63, 63, 216));
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    color: rgb(185, 181, 181);
+    /*background-image: linear-gradient(to right, rgb(2, 48, 78), rgb(7, 40, 90), rgb(63, 63, 216));*/
     display: flex;
     flex-direction: row-reverse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
-    font-family: 'Mordis';
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);*/
     font-weight: 100;
 }
 
@@ -105,27 +109,28 @@ body {
     display: flex;
     align-items: center;
     font-family: 'NunitoSans';
-    color: white;
-    background-image: linear-gradient(to right, rgb(9, 121, 196), rgb(4, 81, 197), rgb(4, 4, 133));
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    /*background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(37, 36, 36), rgb(65, 63, 63));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.247);*/
     border: none;
     border-radius: 16px;
     transition: 0.1s ease-in-out;
 }
 
-.education:active {
+.education:hover {
     scale: 0.9;
     border-radius: 10px;
+    color: rgb(189, 183, 183);
     display: flex;
     flex-direction: row-reverse;
-    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(65, 62, 62), rgb(121, 117, 117));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
-    font-family: 'Mordis';
+    /*background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(65, 62, 62), rgb(121, 117, 117));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);*/
     font-weight: 100;
 }
 
 .education img {
-   display: none;
+    display: none;
     width: 55%;
     height: 85%;
 }
