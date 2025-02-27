@@ -49,9 +49,10 @@ img {
 }
 
 button {
-    padding: 2px;
-    margin: 1px;
-    width: 130px;
+    padding: 4px;
+    margin: 3px;
+    margin-bottom: 10px;
+    width: 140px;
     height: 110px;
     background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));
     border: none;
@@ -60,16 +61,17 @@ button {
     color: black;
     font-size: 23px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 33px;
     transition: 0.3s ease-in-out;
 }
-
+/*
 #n1 {
     border-radius: 33px 6px 6px 33px;
 }
 
 #n2 {
     border-radius: 6px 33px 33px 6px;
-}
+}*/
 
 button:disabled {
     color: rgb(233, 217, 217);
