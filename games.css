@@ -3,15 +3,21 @@
     src: url('NotoSansMath-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'NunitoSans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
+    background-image: linear-gradient(to left, black,rgb(58, 56, 56), rgb(55, 55, 63));
+    color: rgb(197, 192, 192);
 }
 
 img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
 .top {
@@ -26,40 +32,60 @@ img {
     display: flex;
     flex-direction: column;
     align-items:first baseline;
-    font-family: 'Math';
+    font-family: 'NunitoSans';
     font-size: 14px;
-
+    text-shadow: 0 0 3px rgb(143, 141, 141);
 }
 
 .btn {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: space-between;
+    align-items: center;
     margin: 20px;
     padding: 10px;
     margin-top: -10px;
 }
 
 button {
-    padding: 15px;
-    margin: 5px 0 5px 0;
-    background-color: blue;
+    padding: 10px;
+    margin: 5px;
+    width: 170px;
+    height: 140px;
+    background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));
     border: none;
-    border-radius: 13px;
     transition: 0.2 ease-in-out;
     font-weight: 600;
-    font-family: 'Math';
-    color: white;
+    font-family: 'NunitoSans';
+    color: black;
     font-size: 18px;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+#n1 {
+    border-radius: 33px 0 0px 33px;
+}
+
+#n2 {
+    border-radius: 0px 33px 33px 0;
 }
 
 button:disabled {
-    color: gray;
-    background-color: rgb(43, 42, 42);
+    color: rgb(233, 217, 217);
+    background-image: linear-gradient(to right, rgb(177, 169, 169), gray);
+    box-shadow: 0 0 0px rgb(255, 255, 255);
 }
 
 button:active {
+    scale: 0.8;
+    background-image: linear-gradient(to left, purple, blue, indigo);
+    color: whitesmoke;
+}
+
+button:active:disabled {
     scale: 0.9;
-    background-color:rgb(73, 82, 212);
+    background-image: linear-gradient(to left, gray, gray, gray);
     color: whitesmoke;
 }
