@@ -40,23 +40,22 @@ img {
 .btn {
     display: flex;
     flex-wrap: wrap;
-    gap:1vh;
+    gap:2px;
     justify-content: center;
     align-items: center;
-    margin: 1px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
     margin-top: -10px;
 }
 
 button {
-    padding: 10px;
-    margin: 5px;
-    width: 150px;
-    height: 130px;
+    padding: 2px;
+    margin: 1px;
+    width: 130px;
+    height: 110px;
     background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));
     border: none;
-    transition: 0.2 ease-in-out;
-    font-weight: 600;
+    font-weight: 800;
     font-family: 'NunitoSans';
     color: black;
     font-size: 23px;
