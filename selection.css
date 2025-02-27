@@ -63,7 +63,7 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    font-size: 220%;
+    font-size: 260%;
     font-weight: 700;
     justify-content: space-evenly;
     opacity: 1;
@@ -97,6 +97,7 @@ body {
 }
 
 .games img {
+    display: none;
     width: 45%;
 }
 
@@ -124,6 +125,7 @@ body {
 }
 
 .education img {
+   display: none;
     width: 55%;
     height: 85%;
 }
