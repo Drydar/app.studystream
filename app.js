@@ -48,7 +48,7 @@ function displayMessage(message, type = 'info') {
         messageEl.style.border = '1px solid #bee5eb';
     }
     messageEl.innerText = message;
-    // Clear the message after 5 seconds
+    // Clear the message after 1 second
     setTimeout(() => {
         messageEl.innerText = '';
     }, 1000);
@@ -110,7 +110,7 @@ if (document.getElementById('welcomeMessage')) {
             const userDoc = await getDoc(doc(db, "users", user.uid));
             if (userDoc.exists()) {
                 const userData = userDoc.data();
-                document.getElementById('welcomeMessage').innerText = `Hey, ${userData.username}`;
+                document.getElementById('welcomeMessage').innerText = `Hello, ${userData.username}.!`;
                 document.getElementById('pointsDisplay').innerText = `Points earned: ${userData.points}`;
                 document.getElementById('userIdDisplay').innerText = user.uid;
 
@@ -129,7 +129,7 @@ if (document.getElementById('welcomeMessage')) {
                 displayMessage('User data not found!', 'error');
             }
         } else {
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         }
     });
 

@@ -28,7 +28,6 @@ body {
     background-color: rgb(12, 12, 12);
     padding: 10px;
     margin: 0px;
-    border-radius: 0 0 40px 40px;
 }
 
 .name-point {
@@ -52,7 +51,7 @@ body {
 }
 
 h1 {
-    color: blue;
+    color: white;
 }
 
 .points {
@@ -61,11 +60,11 @@ h1 {
 }
 
 .withdraw {
-    background-color:  blue;
+    background-image: linear-gradient(to left, gray, white);
+    color: black;
     width: 130px;
     margin: 10px;
     border-radius: 7px;
-    box-shadow: 0 0 4px white;
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s ease-in-out;
@@ -75,6 +74,11 @@ h1 {
 }
 .withdraw:hover {
     background-color: rgb(2, 2, 95);
+}
+
+#userIdDisplay {
+    width: 100px;
+    max-width: 120px;
 }
 
 .id {
@@ -100,8 +104,8 @@ h1 {
 
 button {
     padding: 10px 20px;
-    background-color: #130436;
-    color: white;
+    background-color: none;
+    color: black;
     border: none;
     cursor: pointer;
     font-family: 'Sans';
@@ -116,12 +120,13 @@ button {
 
 button:hover {
     background-color: blue;
+    border-radius: 15px;
 }
 
 .write-up {
-    padding: 5px;
-    margin: 15px;
-    margin-top: 90vh;
+    padding: 1px;
+    margin: 1px;
+    margin-top: 60vh;
 }
 
 .content1 {
@@ -130,11 +135,12 @@ button:hover {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.171);
+    background-color: none;
     padding: 20px;
-    margin: 40px;
+    margin: 8px;
+    margin-bottom: 30px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
-    border-radius: 7px;
+    border-radius: 17px;
 }
 
 .content2 {
@@ -144,12 +150,11 @@ button:hover {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.171);
-    padding: 10px;
+    background-color: none;
     padding: 20px;
-    margin: 40px;
+    margin: 8px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
-    border-radius: 7px;
+    border-radius: 17px;
 }
 
 .whatsapp {
