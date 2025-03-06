@@ -55,12 +55,12 @@ h1 {
 }
 
 .points {
-    font-size: 16px;
+    font-size: 18px;
     color: #ffffff;
 }
 
 .withdraw {
-    background-image: linear-gradient(to left, gray, white);
+    background-image: linear-gradient(to left, white, rgb(129, 235, 229), white);
     color: black;
     width: 130px;
     margin: 10px;
@@ -73,14 +73,16 @@ h1 {
     font-size: 16px;
     margin-top: -8px;
 }
-.withdraw:hover {
+.withdraw:active {
     background-color: black;
 }
 
 #userIdDisplay {
     width: 100px;
     max-width: 120px;
-    font-size: 10px;
+    font-size: 11px;
+    font-style: oblique;
+    color: white;
 }
 
 .id {
