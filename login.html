@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>User Auth with Firebase</title>
     <link rel="stylesheet" href="login.css">
+    <script type="module" src="app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <div id="message"></div>
+    <div id="message"></div>
+    <img src="streamplex.png" class="logo">
 
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="signInUser(document.getElementById('email').value, document.getElementById('password').value)">Login</button>
-        <div class="bottom">
-            <p>Don't have an account? <a class="switch" href="signup.html">Sign Up</a></p>
-        </div>
+    <div class="container1" id="container1">
+        <h2>Create an account</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button id="signupBtn">Sign Up</button>
     </div>
 
-    <footer class="footer">
-        <p>Rydar-Tech Group</p>
-    </footer>
-    <script type="module" src="supabase.js"></script>
-<script>
-    async function signInUser(email, password) {
-    const { user, error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-    });
+    <div class="container2" id="container2">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="loginBtn">Login</button>
+    </div>
+    <div class="links">
+        <p>Don't have an account? <span id="signup">Sign up</span></p>
+        <p>Already have an account? <span id="login">Login</span></p>
+        <footer>
+            <img src="rydar-tech.png">
+            <p><b>Rydar-Tech Group</b></p>
+        </footer>
+    </div>
+    <script>
+        const login=document.getElementById('login');
+        const signup=document.getElementById('signup');
+        const container1=document.getElementById('container1');
+        const container2=document.getElementById('container2');
 
-    if (error) {
-        console.error("Login Error:", error.message);
-    } else {
-        console.log("User signed in:", user);
-        alert("Login successful!");
-        window.location.href = "dashboard.html"; // Redirect after login
-    }
-}
+        login.addEventListener('click', () => {
+            container1.classList.remove('active');
+            container2.classList.add('active');
+        });
+
+        signup.addEventListener('click', () => {
+            container1.classList.add('active');
+            container2.classList.remove('active');
+        });
     </script>
-
 </body>
 </html>

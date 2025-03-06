@@ -1,71 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <link rel="stylesheet" href="dashboard.css"> <!-- Optional CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+    <script type="module" src="app.js"></script>
 </head>
 <body>
-
-    <h1 id="welcomeMessage">Loading...</h1>
-    <p id="pointsDisplay">Points: 0</p>
-    <button onclick="logout()">Logout</button>
-    <p>Username: <span id="username"></span></p>
-<p>Points: <span id="points"></span></p>
-
-    <script type="module" src="supabase.js"></script>
-    <script src="dashboard.js"></script>
-        <script>getUserProfile();</script>
-        <script type="module">
-        async function getUserProfile() {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) return;
-
-            const { data, error } = await supabase
-                .from("profiles")
-                .select("*")
-                .eq("email", user.email)
-                .single();
-
-            if (error) {
-                console.error("Error fetching profile:", error.message);
-            } else {
-                document.getElementById("username").innerText = data.username;
-                document.getElementById("points").innerText = data.points;
-            }
-        }
-        </script>
-
-<script>
-async function getUser() {
-    const { data: { user } } = await supabase.auth.getUser();
-
-    if (user) {
-        console.log("User:", user);
-        document.getElementById("user-email").innerText = user.email;
-    } else {
-        console.log("No user logged in");
-        window.location.href = "login.html"; // Redirect to login if not authenticated
-    }
-}
-</script>
-
-    <script>
-    async function updateUserPoints(email, newPoints) {
-        const { data, error } = await supabase
-            .from("profiles")
-            .update({ points: newPoints })
-            .eq("email", email);
-
-        if (error) {
-            console.error("Error updating points:", error.message);
-        } else {
-            console.log("Points updated:", data);
-        }
-    }
-    </script>
-
+    <div id="message"></div>
+    <h1 id="welcomeMessage">Hey, </h1>
+    <p id="pointsDisplay">Points earned: 0</p>
+    <p>Your User ID: <span id="userIdDisplay"></span></p>
+    <button id="copyUserIdBtn">Copy User ID</button>
+    <button id="logoutBtn">Logout</button>
 </body>
 </html>

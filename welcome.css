@@ -9,34 +9,30 @@
 }
 
 body {
-    background-image: linear-gradient(to left, whitesmoke, rgb(238, 197, 121), orange);
+    background-image: url(body.png);
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90vh;
 }
 
-img {
-    width: 130px;
-    animation: rotate 8s linear infinite;
-    opacity: 200;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.main-img {
+    width: 80px;
 }
 
 .middle {
+    margin-top: 210px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     line-height: 0;
+    background-color: rgba(177, 211, 240, 0.822);
+    padding: 20px;
+    border-radius: 14px;
+    width: 90%;
 }
 
 .middle p {
@@ -63,13 +59,60 @@ img {
     font-weight: 0;
 }
 
+.bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom-img {
+    width: 40px;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    border: 2px rgb(255, 255, 255) solid;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 7px;
+    font-family: 'Math';
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+}
+
+button:active {
+    scale: 0.9;
+    background: rgb(0, 140, 255);
+    color: white;
+}
+
 footer {
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 1px 15px 1px 0px;
-    padding: 0px;
+    padding: 10px;
     font-family: 'Math';
     font-weight: 800;
     font-size: 15px;
+    color: white;
 }
