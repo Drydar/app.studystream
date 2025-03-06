@@ -6,11 +6,44 @@
     <script type="module" src="app.js"></script>
 </head>
 <body>
-    <div id="message"></div>
-    <h1 id="welcomeMessage">Hey, </h1>
-    <p id="pointsDisplay">Points earned: 0</p>
-    <p>Your User ID: <span id="userIdDisplay"></span></p>
-    <button id="copyUserIdBtn">Copy User ID</button>
-    <button id="logoutBtn">Logout</button>
+    <div class="top">
+        <div class="with-logo">
+            <div class="name-point">
+                <h1 id="welcomeMessage">Hello </h1>
+                <p class='points' id="pointsDisplay" style="margin-top: -15px;">Points earned: 0</p>
+            </div>
+            <img src="streamplex.png">
+        </div>
+        <div class="id">
+            <button class="withdraw">Withdraw</button>
+            <div class="user_id">
+                <p class="points">User ID: <span id="userIdDisplay"></span></p>
+                <!--<button id="copyUserIdBtn">Copy User ID</button>-->
+                <img id="copyUserIdBtn" src="copywhite.png">
+            </div>
+        </div>
+    </div>
+    <div class="write-up">
+        <div class="content1">
+            <p><b>Challenge your mind</b></p>
+            <p><b>Think you're the Sharpest?</b></p>
+            <p>Dive into a world of <b>puzzle</b> and <b>brain teasers</b> packed with <b>tricky challenges</b> designed to test your <b>logic</b> and <b>award your thinking.</b></p>
+            <p><b>Ready to play and improve your genuis?</b></p>
+            <button class="btn" onclick="location.href='games.html';">Play Games</button>
+        </div>
+
+        <div class="content2">
+            <p><b>Unlock Academic Growth</b></p>
+            <p>Visit our <b>curated library</b> of <b>study guides, interactive lessons, and expert insights,</b> all designed to fuel your competitive edge.</p>
+            <p><b>Ready to power up your brain?</b></p>
+            <button class="btn" onclick="location.href='education.html';">Education</button>
+        </div>
+        <!--<button id="logoutBtn">Logout</button>-->
+    </div>
+    <div class="external">
+        <img src="whatsapp.png" alt="" class="whatsapp">
+        <img src="customercare_white.png" alt="" class="customer_care">
+        <img id="logoutBtn" src="logoutwhite.png" alt="" class="logout">
+    </div>
 </body>
 </html>

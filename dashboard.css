@@ -1,31 +1,187 @@
+@font-face {
+    font-family: 'Sans';
+    src: url(NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #e9f7ef;
+    background-color: rgb(248, 244, 244);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
+}
+
+.top {
+    font-family: 'Sans';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0 0 40px 40px;
+}
+
+.name-point {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content:left;
+}
+
+.with-logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.with-logo img {
+    width: 45px;
+    margin-right: 10px;
 }
 
 h1 {
-    color: #2e7d32;
+    color: blue;
 }
 
-p {
+.points {
     font-size: 18px;
-    color: #555;
+    color: #ffffff;
+}
+
+.withdraw {
+    background-color:  blue;
+    width: 130px;
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 4px white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    font-family: 'Math';
+    padding: 10px;
+    font-size: 14px;
+}
+.withdraw:hover {
+    background-color: rgb(2, 2, 95);
+}
+
+.id {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.user_id {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.user_id img {
+    width: 30px;
+    margin-right: 10px;
 }
 
 button {
-    padding: 8px 15px;
-    background-color: #d32f2f;
+    padding: 10px 20px;
+    background-color: #130436;
     color: white;
     border: none;
     cursor: pointer;
+    font-family: 'Sans';
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 4px black;
+    letter-spacing: 1px;
+    width: 150px;
+    font-size: 17px;
 }
 
 button:hover {
-    background-color: #b71c1c;
+    background-color: blue;
+}
+
+.write-up {
+    padding: 5px;
+    margin: 15px;
+    margin-top: 90vh;
+}
+
+.content1 {
+    font-family: 'Math';
+    color: black;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.171);
+    padding: 20px;
+    margin: 40px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    border-radius: 7px;
+}
+
+.content2 {
+    margin-top: 50px;
+    font-family: 'Math';
+    color: black;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.171);
+    padding: 10px;
+    padding: 20px;
+    margin: 40px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    border-radius: 7px;
+}
+
+.whatsapp {
+    width: 45px;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.customer_care {
+    width: 35px;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background-color: rgb(29, 151, 5);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.815);
+}
+
+.logout {
+    width: 35px;
+    background-color: rgb(29, 151, 5);
+    padding: 5px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.815);
+}
+
+.external {
+    padding: 10px;
 }

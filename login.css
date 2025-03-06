@@ -22,6 +22,19 @@ body {
     margin-bottom: 10px;
 }
 
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.app {
+    font-weight: 600;
+    font-size: 20px;
+}
+
 span {
     color: blue;
     cursor: pointer;
@@ -95,6 +108,19 @@ footer {
     gap: 5px;
     justify-content: center;
     align-items: center;
+}
+
+footer img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 footer img {
