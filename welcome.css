@@ -9,9 +9,7 @@
 }
 
 body {
-    background-image: url(body.png);
-    background-position: center;
-    background-size: cover;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +17,8 @@ body {
 }
 
 .main-img {
-    width: 80px;
+    width: 40px;
+    margin-bottom: 10px;
 }
 
 .middle {
@@ -29,10 +28,11 @@ body {
     flex-direction: column;
     align-items: center;
     line-height: 0;
-    background-color: rgba(177, 211, 240, 0.822);
+    background-color: rgba(135, 205, 226, 0.596);
+    box-shadow: 0 0 10px black;
     padding: 20px;
     border-radius: 14px;
-    width: 90%;
+    width: 80%;
 }
 
 .middle p {
@@ -55,7 +55,7 @@ body {
 }
 
 .second-name {
-    margin-top: -20px;
+    margin-top: -5px;
     font-weight: 0;
 }
 
@@ -89,13 +89,16 @@ button {
     justify-content: center;
     margin-top: 50px;
     width: 100%;
-    border: 2px rgb(255, 255, 255) solid;
+    border: none;
+    box-shadow: 0 0 5px black;
     padding: 10px;
     background-color: gray;
     color: white;
     border-radius: 7px;
     font-family: 'Math';
-    font-size: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
     transition: 0.3s ease-in-out;
 }
 
@@ -114,5 +117,5 @@ footer {
     font-family: 'Math';
     font-weight: 800;
     font-size: 15px;
-    color: white;
+    color: black;
 }
