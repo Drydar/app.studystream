@@ -55,7 +55,7 @@ h1 {
 }
 
 .points {
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
 }
 
@@ -70,7 +70,8 @@ h1 {
     transition: 0.3s ease-in-out;
     font-family: 'Math';
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: -8px;
 }
 .withdraw:hover {
     background-color: black;
@@ -96,10 +97,11 @@ h1 {
     justify-content: left;
     align-items: center;
     margin-left: 10px;
+    margin-top: -12px;
 }
 
 .user_id img {
-    width: 25px;
+    width: 20px;
     margin-right: 10px;
 }
 
