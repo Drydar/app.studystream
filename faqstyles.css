@@ -36,15 +36,6 @@ header img {
     animation: rotate 4s linear infinite;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .ceo {
     text-align: right;
     padding: 3px;
@@ -68,7 +59,7 @@ header img {
     top: 200px;
     left: -30%;
     border-radius: 2px;
-    transform: translate(-50%, -50%) scale(2.5);
+    transform: translate(-50%, -50%) scale(6);
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
 }
