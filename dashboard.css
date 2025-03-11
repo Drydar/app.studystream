@@ -36,7 +36,7 @@ body {
 .top {
     font-family: 'Sans';
     background-color: rgb(12, 12, 12);
-    background-image: linear-gradient(to right, gray, rgb(53, 49, 49), black);
+    background-image: linear-gradient(to right, rgb(11, 138, 170), rgb(116, 74, 13), black);
     border: 2px solid rgb(87, 82, 82);
     padding: 10px;
     margin: 8px;
