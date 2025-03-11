@@ -21,7 +21,7 @@
     </div>
 
     <!-- Bank Form -->
-    <form class="form-section" id="bankForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+    <form class="form-section" id="bankForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
         <h3>Bank Withdrawal</h3>
         <div style="text-align: left;">
             <p class="point">1 POINT = &#x20A6; 1</p>
@@ -38,14 +38,14 @@
             <label>Account Number</label>
             <input type="number" name="Account Number" required>
 
-            <label>Amount</label>
+            <label>Amount (points)</label>
             <input type="number" name="Amount" required>
         </div>
         <button type="submit">Submit</button>
     </form>
 
     <!-- Airtime Form -->
-    <form class="form-section" id="airtimeForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+    <form class="form-section" id="airtimeForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
         <h3>Airtime Withdrawal</h3>
         <div style="text-align: left;">
             <p class="point">1 POINT = &#x20A6; 1</p>
@@ -55,22 +55,22 @@
             <label>Network</label>
             <select name="Network" required class="custom-select">
                 <option>MTN</option>
-                <option>Airtel</option>
-                <option>Glo</option>
+                <option>AIRTEL</option>
+                <option>GLO</option>
                 <option>9mobile</option>
             </select>
 
             <label>Phone Number</label>
             <input type="number" name="Phone Number" required>
 
-            <label>Amount</label>
+            <label>Amount (points)</label>
             <input type="number" name="Amount" required>
         </div>
         <button type="submit">Submit</button>
     </form>
 
     <!-- Data Form -->
-    <form class="form-section" id="dataForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+    <form class="form-section" id="dataForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
         <h3>Data Withdrawal</h3>
         <div style="text-align: left;">
             <label>Your UID</label>
@@ -78,7 +78,10 @@
 
             <label>Network</label>
             <select name="Network" required>
-                <option>MTN</option><option>Airtel</option><option>Glo</option><option>9mobile</option>
+                <option>MTN</option>
+                <option>Airtel</option>
+                <option disabled>Glo</option>
+                <option disabled>9mobile</option>
             </select>
 
             <label>Phone Number</label>
