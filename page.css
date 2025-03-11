@@ -13,9 +13,23 @@
     src: url('NotoSansMath-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Sans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
 body {
     background-color: whitesmoke;
-    /*background-image: linear-gradient(to bottom, white, rgba(255, 68, 0, 0.274), rgba(255, 68, 0, 0.575), orangered);*/
+    padding: 0;
+    margin: 0;
+}
+
+.head {
+    background-color: rgb(56, 51, 51);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 0 10px black;
     padding: 0;
     margin: 0;
 }
@@ -32,83 +46,122 @@ header {
     line-height: 0;
 }
 
-.head {
-    background-color: whitesmoke;
+.first {
     position: fixed;
-    width: 100%;
     top: 0;
-}
-
-.top {
+    margin: 0;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
-    gap: 10px;
 }
 
-header .novels {
+.left_arrow {
+    width: 25px;
+    box-shadow: 0 0 8px black;
+    background-color: rgb(97, 90, 90);
+    padding: 6px;
+    margin: 6px;
+    margin-top: -13px;
+    border-radius: 50%;
+}
+
+.left_arrow:active {
+    scale: 0.9;
+}
+
+.novel-link {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Sans';
+    font-size: 13px;
+    padding: 6px;
+    margin: 6px;
+    color: white;
+}
+
+.novel-link img {
+    width: 45px;
+}
+
+.second {
+    margin-top: 45px;
+    text-align: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main img {
+    width: 30px;
+    background-color: transparent;
+    padding: 7px;
+    border-radius: 25%;
+    box-shadow: 0 0 6px black;
+}
+
+.streamplex {
+    color: white;
+    font-family: 'Sans';
+    display: flex;
+    flex-direction: column;
+    align-items:self-end;
+    margin-top: -4px;
+}
+
+.app {
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px black;
+    font-size: 21px;
+}
+
+.second p {
+    margin-top: -14px;
+    font-size: 11px;
+}
+
+.top-nav {
+    font-family: 'Math';
+    font-weight: 400;
+    font-size: 10px;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: white;
 }
 
-.novels {
+.top-item {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
-    font-family: 'Math';
-    font-weight: 600;
-    font-size: 11px;
+    flex-basis: 25%;
+    gap: 0.1px;
     align-items: center;
-    position: fixed;
-    top: 20px;
-    right: 15px;
-    line-height: 0;
-}
-
-.novels img {
-    width: 50px;
-}
-
-.my h1 {
-    font-family: "Math";
-    font-weight: 800;
-    font-size: 35px;
-    color: black;
-}
-
-.my {
-    display: flex;
     flex-direction: column;
-    line-height: 0.5;
+    text-align: center;
 }
 
-header p {
-    font-family: 'Math';
-    font-size: 12px;
-    font-weight: 600;
-    padding-left: 140px;
-    margin-top: -12px;
-    color: black;
+.top-item:active {
+    scale: 1.1;
 }
 
-header .logo {
-    width: 60px;
-    height: 60px;
-    animation: rotate 5s linear infinite;
+.top-item  p {
+    line-height: 1.1;
 }
 
-.image {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.home-pic {
-    width: 130px;
-    position: absolute;
-    top: 0;
-    right: 0;
+.top-item img {
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgb(241, 203, 131);
+    padding: 5px;
 }
 
 .select {
@@ -200,40 +253,6 @@ main p {
     margin: 0;
 }
 
-.top-nav {
-    margin-top: 85px;
-    font-family: 'Math';
-    font-weight: 600;
-    font-size: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.top-item {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-basis: 25%;
-    gap: 0.1px;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.top-item:active {
-    scale: 1.1;
-}
-
-.top-item  p {
-    line-height: 1.1;
-}
-
-.top-item img {
-    width: 25px;
-    border-radius: 50%;
-    background-color: rgb(241, 203, 131);
-    padding: 5px;
-}
 .bottom-navigation {
     position: fixed;
     bottom: 0;
