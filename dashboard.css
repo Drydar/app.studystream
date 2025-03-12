@@ -235,3 +235,42 @@ button:hover {
 .external {
     padding: 10px;
 }
+
+.body {
+    margin-top: 180vh;
+    position: fixed;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b3838;
+    padding: 10px;
+}
+.slider-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.slider {
+    display: flex;
+    transition: transform 1.5s ease;
+}
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.4s ease;
+}
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    transition: transform 1.4s ease;
+    object-fit: cover;
+}
+.slide:not(.active) img {
+    transform: scale(0.85);
+}

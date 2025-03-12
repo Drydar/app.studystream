@@ -32,10 +32,68 @@
         </div>
     </div>
 
+    <div class="body">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active"><img src="Slide1.PNG" alt="Image 1"></div>
+                <div class="slide"><img src="Slide2.PNG" alt="Image 2"></div>
+                <div class="slide"><img src="Slide3.PNG" alt="Image 3"></div>
+                <div class="slide"><img src="Slide4.PNG" alt="Image 4"></div>
+            </div>
+        </div>
+    
+        <script>
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            let index = 0;
+            let startX = 0;
+            let isDragging = false;
+            
+            function updateSlider() {
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+            
+            function nextSlide() {
+                index = (index + 1) % slides.length;
+                updateSlider();
+            }
+            
+            let autoSlide = setInterval(nextSlide, 4000);
+            
+            slider.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+                clearInterval(autoSlide);
+            });
+            
+            slider.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                let moveX = e.touches[0].clientX - startX;
+                slider.style.transform = `translateX(calc(${-index * 100}% + ${moveX}px))`;
+            });
+            
+            slider.addEventListener('touchend', (e) => {
+                let moveX = e.changedTouches[0].clientX - startX;
+                if (moveX > 50) {
+                    index = index > 0 ? index - 1 : slides.length - 1;
+                } else if (moveX < -50) {
+                    index = (index + 1) % slides.length;
+                }
+                updateSlider();
+                autoSlide = setInterval(nextSlide, 3000);
+                isDragging = false;
+            });
+        </script>
+    </div>
+
     <div class="write-up">
         <div class="content2">
             <p><b>Unlock Academic Growth</b></p>
             <p>Visit our <b>curated library</b> of <b>study guides, interactive lessons, and expert insights,</b> all designed to fuel your competitive edge.</p>
+            <p>Have your assignments done and delivered at very affordable prices.</p>
             <p style="margin-top: 40px;"><b>Ready to power up your brain?</b></p>
             <button class="btn" onclick="location.href='education.html';">Visit our library</button>
         </div>
