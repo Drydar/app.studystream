@@ -190,10 +190,11 @@ button {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: #0a0a0a83;
+    background-image: linear-gradient(to right, #0a0a0a83, rgb(63, 53, 53));
+    /*background-color: #0a0a0a83;*/
     padding:20px;
     margin: 8px 30px 8px 30px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
     border-radius: 2px;
     margin-bottom: 24vh;
 }
@@ -205,11 +206,12 @@ button {
     align-items: center;
     justify-items: center;
     text-align: center;
+    background-image: linear-gradient(to right, #000000c4, rgb(110, 107, 107));
     background-color: #000000c4;
     margin-bottom: 100px;
     padding: 20px;
     margin: 8px 17px 8px 17px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
     border-radius: 2px;
 }
 
