@@ -10,7 +10,7 @@
     <h2>StreamPlex Withdrawal</h2>
 
     <div class="withdrawal-options">
-        <button onclick="showForm('bankForm')">Bank Withdrawal</button>
+        <button onclick="showForm('withdrawalForm')">Bank Withdrawal</button>
         <button onclick="showForm('airtimeForm')">Airtime Withdrawal</button>
         <button onclick="showForm('dataForm')">Data Withdrawal</button>
     </div>
@@ -21,28 +21,44 @@
     </div>
 
     <!-- Bank Form -->
-    <form class="form-section" id="bankForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
+    <form class="form-section" id="withdrawalForm" onsubmit="showPopup(event)">
         <h3>Bank Withdrawal</h3>
+
         <div style="text-align: left;">
             <p class="point">1 POINT = &#x20A6; 1</p>
             <p>Minimum withdrawal = 100points</p>
-            <label>Your UID</label>
-            <input type="text" name="UID" required>
+            <input type="text" name="uid" placeholder="User ID" required>
 
-            <label>Bank Name</label>
-            <input type="text" name="Bank Name" required>
+            <input type="text" name="bankName" placeholder="Bank Name" required>
 
-            <label>Account Name (Name on the account)</label>
-            <input type="text" name="Account Name" required>
+            <input type="text" name="accountNumber" placeholder="Account Number" required>
 
-            <label>Account Number</label>
-            <input type="number" name="Account Number" required>
+            <input type="text" name="accountName" placeholder="Account Name (Name on the account)" required>
 
-            <label>Amount (points)</label>
-            <input type="number" name="Amount" required>
+            <input type="number" name="amount" placeholder="Amount" required>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Request</button>
+        <script>
+            document.getElementById('withdrawalForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+            
+              let formData = new FormData(this);
+              let jsonData = {};
+              formData.forEach((value, key) => jsonData[key] = value);
+                        
+              fetch("https://script.google.com/macros/s/AKfycbxmye5dc86ke4uy5kaXKx0i83cR4WQAURFeA6_zcKSy48a2AfZ4gofzp8VevFIqZXLR2g/exec", {
+                method: 'POST',
+                headers: {"Content-Type":"application/json"},
+                body: JSON.stringify(jsonData)
+              })
+              .then(res => res.text())
+              .then(data => alert(data))
+              .catch(err => console.error("Fetch Error:", err));
+            });
+            </script>
     </form>
+
+        
 
     <!-- Airtime Form -->
     <form class="form-section" id="airtimeForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
@@ -66,7 +82,7 @@
             <label>Amount (points)</label>
             <input type="number" name="Amount" required>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Request</button>
     </form>
 
     <!-- Data Form -->
@@ -95,7 +111,7 @@
                 <option>3500 points for 5GB</option>
             </select>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Request</button>
     </form>
 </div>
 
