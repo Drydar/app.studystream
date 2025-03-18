@@ -6,255 +6,260 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <img src="streamplex.png">
-    <h2>StreamPlex Withdrawal</h2>
-        <div class="withdrawal-options">
-            <button onclick="showForm('withdrawalForm')">Bank Withdrawal</button>
-            <button onclick="showForm('airtimeForm')">Airtime Withdrawal</button>
-            <button onclick="showForm('dataForm')">Data Withdrawal</button>
-        </div>
-        
-    <div class="forms">
-        <div class="bankForm">
-            <!-- Bank Form -->
-            <form id="withdrawalForm" class="form-section">
-                <h3>Bank Withdrawal</h3>
-                <p class="point" style="text-align: left;">1 POINT = &#x20A6; 1</p>
-                <input type="text" id="userID" placeholder="Your user ID" required><br>
-                <input type="text" id="bankName" placeholder="Name of your Bank" required><br>
-                <input type="number" id="accountNumber" placeholder="Account Number" required><br>
-                <input type="text" id="accountName" placeholder="Account Name" required><br>
-                <input type="number" id="amount" placeholder="Withdrawal amount" required><br>
-                <button type="submit">Submit Request</button>
-            </form>
-
-            <div id="popup" class="popup">
-                <p>Request sent successfully!</p>
-            </div>
-
-            <script>
-                (function() {
-                    emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
-                })();
-        
-                document.getElementById("withdrawalForm").addEventListener("submit", function(event) {
-                    event.preventDefault();
-        
-                    let serviceID = "service_ue6pkhf";  
-                    let templateID = "template_fojt69l"; 
-        
-                    let recipientEmails = [
-                        "streamplexcc@gmail.com",
-                        "d.rydar001@gmail.com",
-                        "bbfboss2003@gmail.com"
-                    ];
-        
-                    let messageContent = `
-                        🔹 **Bank Withdrawal Request** 🔹
-                        - **User ID:** ${document.getElementById("userID").value}
-                        - **Bank Name:** ${document.getElementById("bankName").value}
-                        - **Account Number:** $${document.getElementById("accountNumber").value}
-                        - **Account Name:** ${document.getElementById("accountName").value}
-                        - **Withdrawal Amount:** ${document.getElementById("amount").value}
-                    `;
-        
-                    recipientEmails.forEach(email => {
-                        let params = { to_email: email, message: messageContent };
-        
-                        emailjs.send(serviceID, templateID, params)
-                            .then(response => {
-                                console.log(`Email sent to ${email}`);
-                            })
-                            .catch(error => {
-                                console.error(`Failed to send email to ${email}`, error);
-                            });
-                    });
-        
-                    showPopup();
-                });
-        
-                function showPopup() {
-                    let popup = document.getElementById("popup");
-                    popup.style.display = "block";
-                    setTimeout(() => {
-                        popup.style.display = "none";
-                        location.reload();
-                    }, 2000);
-                }
-            </script>
-        </div>
-
-
-        <div class="airtimeForm">
-            <!-- Airtime Form -->
-            <form id="airtimeForm" class="form-section">
-                <h3>Airtime Withdrawal</h3>
-                    <p class="point" style="text-align: left;">1 POINT = &#x20A6; 1</p>
-
-                    <input type="text" id="userID" name="UID" placeholder="Your user ID" required>
-                    <label>Choose network</label>
-                    <select id="network" name="Network" class="custom-select" required>
-                        <option id="MTN">MTN</option>
-                        <option id="AIRTEL">AIRTEL</option>
-                        <option id="GLO">GLO</option>
-                        <option id="9mobile">9mobile</option>
-                    </select>
-
-                    <input type="number" id="phoneNumber" name="Phone Number" placeholder="Phone Number" required>
-                    <input type="number" id="Amount" name="Amount" placeholder="Withdrawal Amount" required>
-                    <button type="submit">Submit Request</button>
-            </form>
-
-            <div id="popup" class="popup">
-                <p>Request sent successfully!</p>
-            </div>
-
-            <script>
-                (function() {
-                    emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
-                })();
-        
-                document.getElementById("airtimeForm").addEventListener("submit", function(event) {
-                    event.preventDefault();
-        
-                    let serviceID = "service_ue6pkhf";  
-                    let templateID = "template_fojt69l"; 
-        
-                    let recipientEmails = [
-                        "streamplexcc@gmail.com",
-                        "d.rydar001@gmail.com",
-                        "eogbonnaya966@gmail.com"
-                    ];
-        
-                    let messageContent = `
-                        🔹 **Airtime Withdrawal Request** 🔹
-                        - **User ID:** ${document.getElementById("userID").value}
-                        - **Network:** ${document.getElementById("network").value}
-                        - **Phone Number:** $${document.getElementById("phoneNumber").value}
-                        - **Withdrawal Amount:** ${document.getElementById("amount").value}
-                    `;
-        
-                    recipientEmails.forEach(email => {
-                        let params = { to_email: email, message: messageContent };
-        
-                        emailjs.send(serviceID, templateID, params)
-                            .then(response => {
-                                console.log(`Email sent to ${email}`);
-                            })
-                            .catch(error => {
-                                console.error(`Failed to send email to ${email}`, error);
-                            });
-                    });
-        
-                    showPopup();
-                });
-        
-                function showPopup() {
-                    let popup = document.getElementById("popup");
-                    popup.style.display = "block";
-                    setTimeout(() => {
-                        popup.style.display = "none";
-                        location.reload();
-                    }, 2000);
-                }
-            </script>
-        </div>
-
-        <div class="dataForm">
-            <!-- Data Form -->
-            <form class="form-section" id="dataForm">
-                <h3>Data Withdrawal</h3>
-                    <input type="text" name="UID" id="userID" placeholder="Your user ID" required>
-
-                    <label>Network</label>
-                    <select name="Network" id="network" required>
-                        <option id="MTN">MTN</option>
-                        <option id="AIRTEL">Airtel</option>
-                        <option id="GLO" disabled>Glo</option>
-                        <option id="9mobile" disabled>9mobile</option>
-                    </select>
-
-                    <input type="text" name="Phone Number" id="phoneNumber" placeholder="Phone Number" required>
-
-                    <label>Data Package</label>
-                    <select name="Data Package" id="dataPackage" required>
-                        <option id="packA">350 points for 500MB</option>
-                        <option id="packB">700 points for 1GB</option>
-                        <option id="packC">1400 points for 2GB</option>
-                        <option id="packD">3500 points for 5GB</option>
-                    </select>
-                <button type="submit">Submit Request</button>
-            </form>
-
-            <div id="popup" class="popup">
-                <p>Request sent successfully!</p>
-            </div>
-
-            <script>
-                (function() {
-                    emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
-                })();
-        
-                document.getElementById("dataForm").addEventListener("submit", function(event) {
-                    event.preventDefault();
-        
-                    let serviceID = "service_ue6pkhf";  
-                    let templateID = "template_fojt69l"; 
-        
-                    let recipientEmails = [
-                        "streamplexcc@gmail.com",
-                        "d.rydar001@gmail.com",
-                        "eogbonnaya966@gmail.com"
-                    ];
-        
-                    let messageContent = `
-                        🔹 **Data Withdrawal Request** 🔹
-                        - **User ID:** ${document.getElementById("userID").value}
-                        - **Network:** ${document.getElementById("network").value}
-                        - **Phone Number:** $${document.getElementById("phoneNumber").value}
-                        - **Data Package:** ${document.getElementById("dataPackage").value}
-                    `;
-        
-                    recipientEmails.forEach(email => {
-                        let params = { to_email: email, message: messageContent };
-        
-                        emailjs.send(serviceID, templateID, params)
-                            .then(response => {
-                                console.log(`Email sent to ${email}`);
-                            })
-                            .catch(error => {
-                                console.error(`Failed to send email to ${email}`, error);
-                            });
-                    });
-        
-                    showPopup();
-                });
-        
-                function showPopup() {
-                    let popup = document.getElementById("popup");
-                    popup.style.display = "block";
-                    setTimeout(() => {
-                        popup.style.display = "none";
-                        location.reload();
-                    }, 2000);
-                }
-            </script>
-        </div>
+    <div class="first">
+        <img src="left arrow.png" class="left_arrow" onclick="location.href='index.html';">
     </div>
-</div>
+    <main>
+            <div class="container">
+            <img src="streamplex.png">
+            <h2>StreamPlex Withdrawal</h2>
+                <div class="withdrawal-options">
+                    <button onclick="showForm('withdrawalForm')">Bank Withdrawal</button>
+                    <button onclick="showForm('airtimeForm')">Airtime Withdrawal</button>
+                    <button onclick="showForm('dataForm')">Data Withdrawal</button>
+                </div>
+                
+            <div class="forms">
+                <div class="bankForm">
+                    <!-- Bank Form -->
+                    <form id="withdrawalForm" class="form-section">
+                        <h3>Bank Withdrawal</h3>
+                        <p class="point" style="text-align: left;">1 POINT = &#x20A6; 1</p>
+                        <input type="text" id="userID" placeholder="Your user ID" required><br>
+                        <input type="text" id="bankName" placeholder="Name of your Bank" required><br>
+                        <input type="number" id="accountNumber" placeholder="Account Number" required><br>
+                        <input type="text" id="accountName" placeholder="Account Name" required><br>
+                        <input type="number" id="amount" placeholder="Withdrawal amount" required><br>
+                        <button type="submit">Submit Request</button>
+                    </form>
 
-<script>
-    function showForm(formId) {
-        const forms = document.querySelectorAll('.form-section');
-        forms.forEach(form => {
-            form.style.display = 'none';
-            form.classList.remove('fade-in');
-        });
-        const form = document.getElementById(formId);
-        form.style.display = 'block';
-        setTimeout(() => form.classList.add('fade-in'), 50);
-    }
-</script>
+                    <div id="popup" class="popup">
+                        <p>Request sent successfully!</p>
+                    </div>
+
+                    <script>
+                        (function() {
+                            emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
+                        })();
+                
+                        document.getElementById("withdrawalForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                
+                            let serviceID = "service_ue6pkhf";  
+                            let templateID = "template_fojt69l"; 
+                
+                            let recipientEmails = [
+                                "streamplexcc@gmail.com",
+                                "d.rydar001@gmail.com",
+                                "bbfboss2003@gmail.com"
+                            ];
+                
+                            let messageContent = `
+                                🔹Bank Withdrawal Request🔹
+                                User ID: ${document.getElementById("userID").value}
+                                Bank Name: ${document.getElementById("bankName").value}
+                                Account Number: ${document.getElementById("accountNumber").value}
+                                Account Name: ${document.getElementById("accountName").value}
+                                Withdrawal Amount: ${document.getElementById("amount").value}
+                            `;
+                
+                            recipientEmails.forEach(email => {
+                                let params = { to_email: email, message: messageContent };
+                
+                                emailjs.send(serviceID, templateID, params)
+                                    .then(response => {
+                                        console.log(`Email sent to ${email}`);
+                                    })
+                                    .catch(error => {
+                                        console.error(`Failed to send email to ${email}`, error);
+                                    });
+                            });
+                
+                            showPopup();
+                        });
+                
+                        function showPopup() {
+                            let popup = document.getElementById("popup");
+                            popup.style.display = "block";
+                            setTimeout(() => {
+                                popup.style.display = "none";
+                                location.reload();
+                            }, 2000);
+                        }
+                    </script>
+                </div>
+
+
+                <div class="airtimeForm">
+                    <!-- Airtime Form -->
+                    <form id="airtimeForm" class="form-section">
+                        <h3>Airtime Withdrawal</h3>
+                            <p class="point" style="text-align: left;">1 POINT = &#x20A6; 1</p>
+
+                            <input type="text" id="userID" name="UID" placeholder="Your user ID" required>
+                            <label>Choose network</label>
+                            <select id="network" name="Network" class="custom-select" required>
+                                <option id="MTN">MTN</option>
+                                <option id="AIRTEL">AIRTEL</option>
+                                <option id="GLO">GLO</option>
+                                <option id="9mobile">9mobile</option>
+                            </select>
+
+                            <input type="number" id="phoneNumber" name="Phone Number" placeholder="Phone Number" required>
+                            <input type="number" id="Amount" name="Amount" placeholder="Withdrawal Amount" required>
+                            <button type="submit">Submit Request</button>
+                    </form>
+
+                    <div id="popup" class="popup">
+                        <p>Request sent successfully!</p>
+                    </div>
+
+                    <script>
+                        (function() {
+                            emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
+                        })();
+                
+                        document.getElementById("airtimeForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                
+                            let serviceID = "service_ue6pkhf";  
+                            let templateID = "template_fojt69l"; 
+                
+                            let recipientEmails = [
+                                "streamplexcc@gmail.com",
+                                "d.rydar001@gmail.com",
+                                "eogbonnaya966@gmail.com"
+                            ];
+                
+                            let messageContent = `
+                                🔹 **Airtime Withdrawal Request** 🔹
+                                - **User ID:** ${document.getElementById("userID").value}
+                                - **Network:** ${document.getElementById("network").value}
+                                - **Phone Number:** $${document.getElementById("phoneNumber").value}
+                                - **Withdrawal Amount:** ${document.getElementById("amount").value}
+                            `;
+                
+                            recipientEmails.forEach(email => {
+                                let params = { to_email: email, message: messageContent };
+                
+                                emailjs.send(serviceID, templateID, params)
+                                    .then(response => {
+                                        console.log(`Email sent to ${email}`);
+                                    })
+                                    .catch(error => {
+                                        console.error(`Failed to send email to ${email}`, error);
+                                    });
+                            });
+                
+                            showPopup();
+                        });
+                
+                        function showPopup() {
+                            let popup = document.getElementById("popup");
+                            popup.style.display = "block";
+                            setTimeout(() => {
+                                popup.style.display = "none";
+                                location.reload();
+                            }, 2000);
+                        }
+                    </script>
+                </div>
+
+                <div class="dataForm">
+                    <!-- Data Form -->
+                    <form class="form-section" id="dataForm">
+                        <h3>Data Withdrawal</h3>
+                            <input type="text" name="UID" id="userID" placeholder="Your user ID" required>
+
+                            <label>Network</label>
+                            <select name="Network" id="network" required>
+                                <option id="MTN">MTN</option>
+                                <option id="AIRTEL">Airtel</option>
+                                <option id="GLO" disabled>Glo</option>
+                                <option id="9mobile" disabled>9mobile</option>
+                            </select>
+
+                            <input type="text" name="Phone Number" id="phoneNumber" placeholder="Phone Number" required>
+
+                            <label>Data Package</label>
+                            <select name="Data Package" id="dataPackage" required>
+                                <option id="packA">350 points for 500MB</option>
+                                <option id="packB">700 points for 1GB</option>
+                                <option id="packC">1400 points for 2GB</option>
+                                <option id="packD">3500 points for 5GB</option>
+                            </select>
+                        <button type="submit">Submit Request</button>
+                    </form>
+
+                    <div id="popup" class="popup">
+                        <p>Request sent successfully!</p>
+                    </div>
+
+                    <script>
+                        (function() {
+                            emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
+                        })();
+                
+                        document.getElementById("dataForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                
+                            let serviceID = "service_ue6pkhf";  
+                            let templateID = "template_fojt69l"; 
+                
+                            let recipientEmails = [
+                                "streamplexcc@gmail.com",
+                                "d.rydar001@gmail.com",
+                                "eogbonnaya966@gmail.com"
+                            ];
+                
+                            let messageContent = `
+                                🔹 **Data Withdrawal Request** 🔹
+                                - **User ID:** ${document.getElementById("userID").value}
+                                - **Network:** ${document.getElementById("network").value}
+                                - **Phone Number:** $${document.getElementById("phoneNumber").value}
+                                - **Data Package:** ${document.getElementById("dataPackage").value}
+                            `;
+                
+                            recipientEmails.forEach(email => {
+                                let params = { to_email: email, message: messageContent };
+                
+                                emailjs.send(serviceID, templateID, params)
+                                    .then(response => {
+                                        console.log(`Email sent to ${email}`);
+                                    })
+                                    .catch(error => {
+                                        console.error(`Failed to send email to ${email}`, error);
+                                    });
+                            });
+                
+                            showPopup();
+                        });
+                
+                        function showPopup() {
+                            let popup = document.getElementById("popup");
+                            popup.style.display = "block";
+                            setTimeout(() => {
+                                popup.style.display = "none";
+                                location.reload();
+                            }, 2000);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showForm(formId) {
+                const forms = document.querySelectorAll('.form-section');
+                forms.forEach(form => {
+                    form.style.display = 'none';
+                    form.classList.remove('fade-in');
+                });
+                const form = document.getElementById(formId);
+                form.style.display = 'block';
+                setTimeout(() => form.classList.add('fade-in'), 50);
+            }
+        </script>
+    </main>
 </body>
 </html>

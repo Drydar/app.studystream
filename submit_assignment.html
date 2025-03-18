@@ -5,28 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUTO</title>
     <link rel="stylesheet" href="assignment.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
         <div class="intro">
-            <p>StreamPlex</p>
+            <h1>STREAMPLEX</h1>
         </div>
         <div class="top">
             <h3>Send your assignments</h3>
             <div class="next">
-                <p>Minimum Price: &#8358;500</p>
+                <p>Minimum Price: &#8358;400</p>
                 <p>Maximum Price: .....</p>
             </div>
-            <p style="font-size: 13px; margin-top: 12px; margin-bottom: 5px;"><i>Provide the required information and an agent will reach out to you</i></p>
         </div>
-    <form method="POST" action="https://formspree.io/f/mnnnyzvg" enctype="multipart/form-data">
-        <input type="text" name="Name" placeholder="Your name" required>
-        <input type="number" name="WhatsApp Number" placeholder="WhatsApp Number" required>
-        <input type="text" name="Course Code" placeholder="Course code" required>
-        <div style="text-align: center;">
-            <button type="submit">Submit</button>
+        <div class="container">
+            <form id="myForm" class="form-section">
+                <input type="text" id="name" placeholder="Full Name" required><br>
+                <input type="text" id="whatsappNumber" placeholder="WhastApp Number" required><br>
+                <input type="number" id="courseCode" placeholder="Course Code" required><br>
+                <input type="text" id="instruction" placeholder="Any specific requirements?"><br>
+                <button type="submit">Submit Request</button>
+            </form>
+            
+            <div id="popup" class="popup">
+                <p>Request sent successfully!<br>Expect an agent on WhatsApp</p>
+            </div>
+            <script>
+                (function() {
+                    emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
+                })();
+
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+
+                    let serviceID = "service_ue6pkhf";  
+                    let templateID = "template_fojt69l"; 
+
+                    let recipientEmails = [
+                        "streamplexcc@gmail.com",
+                        "d.rydar001@gmail.com",
+                        "bbfboss2003@gmail.com"
+                    ];
+
+                    let messageContent = `
+                        🔹Assignment Request🔹
+                        Full Name: ${document.getElementById("name").value}
+                        WhatsApp Number: ${document.getElementById("whatsappNumber").value}
+                        Course Code: ${document.getElementById("courseCode").value}
+                        Instruction: ${document.getElementById("instruction").value}
+                    `;
+
+                    recipientEmails.forEach(email => {
+                        let params = { to_email: email, message: messageContent };
+
+                        emailjs.send(serviceID, templateID, params)
+                            .then(response => {
+                                console.log(`Email sent to ${email}`);
+                            })
+                            .catch(error => {
+                                console.error(`Failed to send email to ${email}`, error);
+                            });
+                    });
+
+                    showPopup();
+                });
+
+                function showPopup() {
+                    let popup = document.getElementById("popup");
+                    popup.style.display = "block";
+                    setTimeout(() => {
+                        popup.style.display = "none";
+                        location.reload();
+                    }, 3000);
+                }
+            </script>
         </div>
-    </form>
 </body>
+
 <div class="bottom-navigation">
     <style>
         #nav__2 {

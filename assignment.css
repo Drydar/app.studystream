@@ -13,6 +13,11 @@
   src: url('Mordis.ttf');
 }
 
+@font-face {
+  font-family: 'Sans';
+  src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +42,9 @@
     align-items: center;
     gap: 7px;
     margin: 0;
-    font-family: "Mordis";
+    font-family: "Sans";
     font-weight: 600;
-    font-size: 32px;
+    font-size: 14px;
     padding: 14px;
     padding-top: 15px;
 }
@@ -64,10 +69,10 @@
     background-color: transparent;
     width: 100%;
     color: black;
-    font-family: 'Math';
+    font-family: 'Sans';
     text-align: center;
     padding: 5px;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 10px 10px;
     margin: 0;
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.479);
   }
@@ -86,31 +91,47 @@
   }
   body {
     font-family: 'Math';
-    background-image: linear-gradient(to top, whitesmoke, rgb(238, 197, 121));
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
   }
-  
-form {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.315);
-    padding: 15px;
-    width: 95%;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.945);
+
+  .container {
+    background: #fff;
+    padding: 10px;
+    margin-top: 40px;
+    width: 85%;
+    max-width: 600px;
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.808);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.form-section label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.form-section input {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: none;
+  border-bottom: 1px solid gray;
+  background: none;
+  font-size: 15px;
+  font-family: 'Sans';
 }
 
 input {
     padding:7px;
     border: none;
     border-bottom: 1px solid black;
-    font-family: 'Math';
+    font-family: 'Sans';
     font-size: 16px;
     margin: 3px;
     font-weight: 500;
@@ -122,7 +143,32 @@ input:focus {
   border: none;
   background-color: transparent;
   outline: none;
-  border-bottom: 1px solid black;
+  box-shadow: 0 0 6px rgb(4, 4, 148);
+  border-radius: 7px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000;
+  width: 250px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 button {
@@ -140,7 +186,7 @@ button {
 }
 
 button:active {
-  background-color: #055ebd;
+  background-color: #086dda;
   scale: 0.9;
 }
 
