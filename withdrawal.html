@@ -22,7 +22,7 @@
                 <h3>Bank Withdrawal</h3>
                 <p class="point" style="text-align: left;">1 POINT = &#x20A6; 1</p>
                 <input type="text" id="userID" placeholder="Your user ID" required><br>
-                <input type="email" id="bankName" placeholder="Name of your Bank" required><br>
+                <input type="text" id="bankName" placeholder="Name of your Bank" required><br>
                 <input type="number" id="accountNumber" placeholder="Account Number" required><br>
                 <input type="text" id="accountName" placeholder="Account Name" required><br>
                 <input type="number" id="amount" placeholder="Withdrawal amount" required><br>
@@ -103,7 +103,7 @@
 
                     <input type="number" id="phoneNumber" name="Phone Number" placeholder="Phone Number" required>
                     <input type="number" id="Amount" name="Amount" placeholder="Withdrawal Amount" required>
-                    <button type="submitAirtime">Submit Request</button>
+                    <button type="submit">Submit Request</button>
             </form>
 
             <div id="popup" class="popup">
@@ -115,7 +115,7 @@
                     emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
                 })();
         
-                document.getElementById("airtimeForm").addEventListener("submitAirtime", function(event) {
+                document.getElementById("airtimeForm").addEventListener("submit", function(event) {
                     event.preventDefault();
         
                     let serviceID = "service_ue6pkhf";  
@@ -163,31 +163,83 @@
 
         <div class="dataForm">
             <!-- Data Form -->
-            <form class="form-section" id="dataForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xdkeozep" method="POST">
+            <form class="form-section" id="dataForm">
                 <h3>Data Withdrawal</h3>
-                    <label>Your UID</label>
-                    <input type="text" name="UID" required>
+                    <input type="text" name="UID" id="userID" placeholder="Your user ID" required>
 
                     <label>Network</label>
-                    <select name="Network" required>
-                        <option>MTN</option>
-                        <option>Airtel</option>
-                        <option disabled>Glo</option>
-                        <option disabled>9mobile</option>
+                    <select name="Network" id="network" required>
+                        <option id="MTN">MTN</option>
+                        <option id="AIRTEL">Airtel</option>
+                        <option id="GLO" disabled>Glo</option>
+                        <option id="9mobile" disabled>9mobile</option>
                     </select>
 
-                    <label>Phone Number</label>
-                    <input type="text" name="Phone Number" required>
+                    <input type="text" name="Phone Number" id="phoneNumber" placeholder="Phone Number" required>
 
                     <label>Data Package</label>
-                    <select name="Data Package" required>
-                        <option>350 points for 500MB</option>
-                        <option>700 points for 1GB</option>
-                        <option>1400 points for 2GB</option>
-                        <option>3500 points for 5GB</option>
+                    <select name="Data Package" id="dataPackage" required>
+                        <option id="packA">350 points for 500MB</option>
+                        <option id="packB">700 points for 1GB</option>
+                        <option id="packC">1400 points for 2GB</option>
+                        <option id="packD">3500 points for 5GB</option>
                     </select>
                 <button type="submit">Submit Request</button>
             </form>
+
+            <div id="popup" class="popup">
+                <p>Request sent successfully!</p>
+            </div>
+
+            <script>
+                (function() {
+                    emailjs.init("ereOOE-SViWJwwW7w"); // Your EmailJS Public Key
+                })();
+        
+                document.getElementById("dataForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+        
+                    let serviceID = "service_ue6pkhf";  
+                    let templateID = "template_fojt69l"; 
+        
+                    let recipientEmails = [
+                        "streamplexcc@gmail.com",
+                        "d.rydar001@gmail.com",
+                        "eogbonnaya966@gmail.com"
+                    ];
+        
+                    let messageContent = `
+                        🔹 **Data Withdrawal Request** 🔹
+                        - **User ID:** ${document.getElementById("userID").value}
+                        - **Network:** ${document.getElementById("network").value}
+                        - **Phone Number:** $${document.getElementById("phoneNumber").value}
+                        - **Data Package:** ${document.getElementById("dataPackage").value}
+                    `;
+        
+                    recipientEmails.forEach(email => {
+                        let params = { to_email: email, message: messageContent };
+        
+                        emailjs.send(serviceID, templateID, params)
+                            .then(response => {
+                                console.log(`Email sent to ${email}`);
+                            })
+                            .catch(error => {
+                                console.error(`Failed to send email to ${email}`, error);
+                            });
+                    });
+        
+                    showPopup();
+                });
+        
+                function showPopup() {
+                    let popup = document.getElementById("popup");
+                    popup.style.display = "block";
+                    setTimeout(() => {
+                        popup.style.display = "none";
+                        location.reload();
+                    }, 2000);
+                }
+            </script>
         </div>
     </div>
 </div>

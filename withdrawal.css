@@ -96,11 +96,14 @@ h2 {
     border: none;
     border-bottom: 1px solid gray;
     background: none;
+    font-size: 15px;
     font-family: 'Sans';
 }
 
 input:focus {
     outline: none;
+    box-shadow: 0 0 6px purple;
+    border-radius: 6px;
 }
 
 .form-section select {
