@@ -30,16 +30,16 @@ body {
     box-shadow: 0 0 2px black;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 13px 13px;
+    border-radius: 0;
 }
 
 .top {
     font-family: 'Sans';
-    background-color: rgb(12, 12, 12);
-    background-image: linear-gradient(to right, rgb(11, 138, 170), rgb(116, 74, 13), black);
+    background-color: rgb(110, 70, 9);
+    /*background-image: linear-gradient(to right, rgb(11, 138, 170), rgb(116, 74, 13), black);*/
     border: 1px solid rgb(87, 82, 82);
     padding: 10px;
-    margin: 3px;
+    margin: 3px 7px;
     border-radius: 13px;
 }
 
@@ -51,9 +51,10 @@ body {
 }
 
 #welcomeMessage {
-    font-family: 'Math';
+    font-family: 'Sans';
     font-weight: 400;
     margin-top: 0;
+    font-size: 26px;
 }
 
 .with-logo {
@@ -67,6 +68,8 @@ body {
 .with-logo img {
     width: 40px;
     margin-right: 10px;
+    background-image: linear-gradient(to left, black, rgb(39, 34, 34));
+    /*background-color: black;*/
 }
 
 h1 {
@@ -180,7 +183,7 @@ button {
 .write-up {
     padding: 1px;
     margin: 1px;
-    margin-top: 75vh;
+    margin-top: 86vh;
     width: auto;
 }
 
@@ -190,29 +193,29 @@ button {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-image: linear-gradient(to right, #0a0a0a83, rgb(63, 53, 53));
-    /*background-color: #0a0a0a83;*/
+    /*background-image: linear-gradient(to right, #0a0a0a83, rgb(63, 53, 53));*/
+    background-color: rgb(190, 181, 181);
     padding:20px;
     margin: 8px 30px 8px 30px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
-    border-radius: 2px;
-    margin-bottom: 24vh;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.788);
+    border-radius: 7px;
+    margin-bottom: 30vh;
 }
 
 .content2 {
     margin-top: 50px;
     font-family: 'Math';
-    color: white;
+    color: black;
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-image: linear-gradient(to right, #000000c4, rgb(110, 107, 107));
-    background-color: #000000c4;
+    /*background-image: linear-gradient(to right, #000000c4, rgb(110, 107, 107));*/
+    background-color: transparent;
     margin-bottom: 100px;
     padding: 20px;
     margin: 8px 17px 8px 17px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
-    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.829);
+    border-radius: 7px;
 }
 
 .whatsapp {
@@ -280,7 +283,7 @@ button {
     transition: transform 1.4s ease;
 }
 .slide img {
-    width: 75%;
+    width: 70%;
     border-radius: 9px;
     height: auto;
     transition: transform 1.4s ease;

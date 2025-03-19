@@ -171,23 +171,38 @@
                         <h3>Data Withdrawal</h3>
                             <input type="text" name="UID" id="userID" placeholder="Your user ID" required>
 
-                            <label>Network</label>
+                            <!--<label>Network</label>
                             <select name="Network" id="network" required>
                                 <option id="MTN">MTN</option>
                                 <option id="AIRTEL">Airtel</option>
                                 <option id="GLO" disabled>Glo</option>
                                 <option id="9mobile" disabled>9mobile</option>
-                            </select>
+                            </select>-->
 
-                            <input type="text" name="Phone Number" id="phoneNumber" placeholder="Phone Number" required>
+                            <input type="number" name="Phone Number" id="phoneNumber" placeholder="Phone Number" required>
 
-                            <label>Data Package</label>
-                            <select name="Data Package" id="dataPackage" required>
-                                <option id="packA">350 points for 500MB</option>
-                                <option id="packB">700 points for 1GB</option>
-                                <option id="packC">1400 points for 2GB</option>
-                                <option id="packD">3500 points for 5GB</option>
-                            </select>
+                            <div class="MTN" id="mtnData">
+                                <label>Choose a Data Plan<p>MTN Data Packages</p></label>
+                                <select name="Data Package" id="dataPackage" required>
+                                    <option id="packA">500 points for 750MB (7 days)</option>
+                                    <option id="packB">800 points for 1GB (7 days)</option>
+                                    <option id="packC">1500 points for 5GB (7 days)</option>
+                                    <option id="packD">2000 points for 4.5GB (30 days)</option>
+                                    <option id="packE">3000 points for 7GB (7 days)</option>
+                                </select>
+                            </div>
+
+                            <div class="AIRTEL" id="airtelData">
+                                <label>Airtel Data Packages</label>
+                                <select name="Data Package" id="dataPackage">
+                                    <option id="packA">500 points for 500MB (7 days)</option>
+                                    <option id="packB">500 points for 1GB (1 day)</option>
+                                    <option id="packC">800 points for 1GB (7 days)</option>
+                                    <option id="packD">1000 points for 1.5GB (7 days)</option>
+                                    <option id="packE">1500 points for 3.5GB (7days)</option>
+                                    <option id="packF">4000 points for 10GB (30 days)</option>
+                                </select>
+                            </div>
                         <button type="submit">Submit Request</button>
                     </form>
 

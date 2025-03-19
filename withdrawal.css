@@ -139,6 +139,17 @@ input:focus {
     font-family: 'Sans';
 }
 
+select {
+    appearance: none;
+    border: 1px solid blue;
+    border-radius: 7px;
+}
+
+select option {
+    background-color: lightblue;
+    border-radius: 7px;
+}
+
 select:focus {
     outline: none;
 }

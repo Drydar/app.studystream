@@ -44,9 +44,11 @@
     margin: 0;
     font-family: "Sans";
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     padding: 14px;
-    padding-top: 15px;
+    background-color: whitesmoke;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .intro img {
@@ -66,19 +68,19 @@
 .top {
     position: fixed;
     top: 40px;
-    background-color: transparent;
-    width: 100%;
+    background-color: white;
+    width: 92%;
     color: black;
     font-family: 'Sans';
     text-align: center;
     padding: 5px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     margin: 0;
-    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.479);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.815);
   }
 
   .top h3{
-    margin-top: 15px;
+    margin-top: 1px;
   }
 
   .next {
