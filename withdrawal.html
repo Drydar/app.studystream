@@ -84,7 +84,7 @@
                             setTimeout(() => {
                                 popup.style.display = "none";
                                 location.reload();
-                            }, 2000);
+                            }, 3000);
                         }
                     </script>
                 </div>
@@ -132,11 +132,11 @@
                             ];
                 
                             let messageContent = `
-                                🔹 **Airtime Withdrawal Request** 🔹
-                                - **User ID:** ${document.getElementById("userID").value}
-                                - **Network:** ${document.getElementById("network").value}
-                                - **Phone Number:** $${document.getElementById("phoneNumber").value}
-                                - **Withdrawal Amount:** ${document.getElementById("amount").value}
+                                🔹AIRTIME WITHDRAWAL REQUEST🔹
+                                User ID: ${document.getElementById("userID").value}
+                                Network: ${document.getElementById("network").value}
+                                Phone Number: ${document.getElementById("phoneNumber").value}
+                                Withdrawal Amount: ${document.getElementById("amount").value}
                             `;
                 
                             recipientEmails.forEach(email => {
@@ -160,7 +160,7 @@
                             setTimeout(() => {
                                 popup.style.display = "none";
                                 location.reload();
-                            }, 2000);
+                            }, 3000);
                         }
                     </script>
                 </div>
@@ -183,7 +183,8 @@
 
                             <div class="MTN" id="mtnData">
                                 <label>Choose a Data Plan<p>MTN Data Packages</p></label>
-                                <select name="Data Package" id="dataPackage" required>
+                                <select name="Data Package" id="mtnDataPackage">
+                                    <option id="#">Click to Select</option>
                                     <option id="packA">500 points for 750MB (7 days)</option>
                                     <option id="packB">800 points for 1GB (7 days)</option>
                                     <option id="packC">1500 points for 5GB (7 days)</option>
@@ -194,7 +195,8 @@
 
                             <div class="AIRTEL" id="airtelData">
                                 <label>Airtel Data Packages</label>
-                                <select name="Data Package" id="dataPackage">
+                                <select name="Data Package" id="airtelDataPackage">
+                                    <option id="#">Click to Select</option>
                                     <option id="packA">500 points for 500MB (7 days)</option>
                                     <option id="packB">500 points for 1GB (1 day)</option>
                                     <option id="packC">800 points for 1GB (7 days)</option>
@@ -228,11 +230,12 @@
                             ];
                 
                             let messageContent = `
-                                🔹 **Data Withdrawal Request** 🔹
-                                - **User ID:** ${document.getElementById("userID").value}
-                                - **Network:** ${document.getElementById("network").value}
-                                - **Phone Number:** $${document.getElementById("phoneNumber").value}
-                                - **Data Package:** ${document.getElementById("dataPackage").value}
+                                🔹DATA WITHDRAWAL REQUEST🔹
+                                User ID: ${document.getElementById("userID").value}
+                                Network: ${document.getElementById("network").value}
+                                Phone Number: ${document.getElementById("phoneNumber").value}
+                                MTN Data Package: ${document.getElementById("mtnDataPackage").value}
+                                Airtel Data Package: ${document.getElementById("airtelDataPackage").value}
                             `;
                 
                             recipientEmails.forEach(email => {
@@ -256,7 +259,7 @@
                             setTimeout(() => {
                                 popup.style.display = "none";
                                 location.reload();
-                            }, 2000);
+                            }, 3000);
                         }
                     </script>
                 </div>
